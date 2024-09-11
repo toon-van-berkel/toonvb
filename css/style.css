@@ -180,7 +180,7 @@ p {
     position: absolute;
     left: 70vh;
     top: 20vh;
-    background-color: gray;
+    background-color: rgb(58, 58, 58);
     width: 40vh;
     height: 35vh;
     display: flex;
