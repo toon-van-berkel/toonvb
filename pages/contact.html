@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toonvb - Contact</title>
+    <link rel="stylesheet" href="../css/scss/style.css">
+</head>
+
+<body>
+    <div class="body-bg"></div>
+    <nav>
+        <h1><a href="../index.html " class="white-nav">TOONvb</a></h1>
+        <ul>
+            <li><a href=" "><button class="white-button">Professional</button></a></li>
+            <li><a href="./portfolio.html" class="white-nav">Portfolio</a></li>
+            <li><a href="./aboutme.html" class="white-nav">About me</a></li>
+            <li><a href="./contact.html" class="white-nav">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="contact-form">
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                      <input type="email" id="email" name="email" placeholder="Email" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="title">
+                        <input type="text" id="title" name="title" placeholder="Title" required>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="message">
+                        <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+                    </label>
+                </div>
+                <div class="form-group none-form">
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+            <p class="privacy-notice">Our Company does not save your information. Your privacy is very important to us.</p>
+        </div>
+    </section>
+</body>
+
+</html>

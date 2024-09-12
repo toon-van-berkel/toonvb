@@ -1,8 +1,10 @@
 @import 'nav';
 @import 'footer';
+@import 'body';
 @import 'important';
 @import 'headers';
 @import 'card';
+@import 'form';
 @import 'font';
 button {
     font-size: 20px;
@@ -11,6 +13,11 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+}
+
+.white-button {
+    background-color: white;
+    color: black;
 }
 
 a {
