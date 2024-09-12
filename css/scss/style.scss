@@ -1,25 +1,9 @@
 @import 'nav';
+@import 'footer';
 @import 'important';
 @import 'headers';
 @import 'card';
 @import 'font';
-h1 {
-    font-size: 30px;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    width: 30vw;
-    justify-content: space-between;
-    margin-left: 200px;
-}
-
-li {
-    font-size: 20px;
-}
-
 button {
     font-size: 20px;
     padding: 5px 10px;
@@ -40,18 +24,6 @@ section {
 
 span {
     color: #A64B86;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-p {
-    font-family: 'UC';
 }
 
 .row {

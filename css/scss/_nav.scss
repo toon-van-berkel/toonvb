@@ -5,3 +5,17 @@ nav {
     display: flex;
     flex-direction: row;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-between;
+    margin-left: 200px;
+    align-items: center;
+}
+
+nav li {
+    font-size: 20px;
+}

@@ -6,6 +6,27 @@ nav {
   flex-direction: row;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+  margin-left: 200px;
+  align-items: center;
+}
+
+nav li {
+  font-size: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 50px 100px;
+  font-size: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +37,25 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+p {
+  font-family: "UC";
+}
+
 .card-container {
   width: 600px;
+  margin-top: 50px;
 }
 
 .card {
@@ -91,6 +129,7 @@ body {
 
 .card-span {
   color: white;
+  text-align: center;
 }
 
 @font-face {
@@ -101,23 +140,6 @@ body {
   font-family: "UCB";
   src: url("../font/Uniform Condensed Bold.ttf");
 }
-h1 {
-  font-size: 30px;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  width: 30vw;
-  justify-content: space-between;
-  margin-left: 200px;
-}
-
-li {
-  font-size: 20px;
-}
-
 button {
   font-size: 20px;
   padding: 5px 10px;
@@ -138,18 +160,6 @@ section {
 
 span {
   color: #A64B86;
-}
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-p {
-  font-family: "UC";
 }
 
 .row {
