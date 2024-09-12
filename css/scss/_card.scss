@@ -1,0 +1,76 @@
+.card-container {
+    width: 600px;
+}
+
+.card {
+    background-color: #A64B86;
+    width: 275px;
+    height: 150px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.card-one {
+    background-color: #A64B86;
+    height: 150px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: white;
+    background-color: #A64B86;
+    width: 255px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.card-two {
+    background-color: #A64B86;
+    height: 345px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: white;
+    background-color: #A64B86;
+    width: 275px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.card-three {
+    background-color: #A64B86;
+    height: 140px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    color: white;
+    background-color: #A64B86;
+    width: 535px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.card-span {
+    color: white;
+}

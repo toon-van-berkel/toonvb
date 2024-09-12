@@ -1,0 +1,96 @@
+@import 'nav';
+@import 'important';
+@import 'headers';
+@import 'card';
+@import 'font';
+h1 {
+    font-size: 30px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+
+li {
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #A64B86;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    padding: 0 100px;
+}
+
+span {
+    color: #A64B86;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-family: 'UC';
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.me {
+    position: absolute;
+    right: 200px;
+    bottom: 0;
+}
+
+.notification {
+    position: absolute;
+    left: 70vh;
+    top: 20vh;
+    background-color: rgb(58, 58, 58);
+    width: 40vh;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+}
+
+.notification a {
+    color: purple;
+}
