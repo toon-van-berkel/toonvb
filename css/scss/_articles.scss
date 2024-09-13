@@ -1,9 +1,20 @@
 .scroll {
     overflow-y: scroll;
+    height: auto;
 }
 
 .embed {
     position: absolute;
     top: 0;
     left: 30vw;
+}
+
+.articles {
+    position: absolute;
+    width: 60vw;
+}
+
+.pictures {
+    position: absolute;
+    right: 0;
 }

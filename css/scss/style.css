@@ -66,6 +66,13 @@ body {
   font-family: "UCB";
 }
 
+.location {
+  position: absolute;
+  top: 120px;
+  display: flex;
+  margin-left: 100px;
+}
+
 h1 {
   font-size: 30px;
 }
@@ -274,6 +281,27 @@ textarea {
 .cardaboutme-seven {
   top: 50vh;
   right: 35vw;
+}
+
+.scroll {
+  overflow-y: scroll;
+  height: auto;
+}
+
+.embed {
+  position: absolute;
+  top: 0;
+  left: 30vw;
+}
+
+.articles {
+  position: absolute;
+  width: 60vw;
+}
+
+.pictures {
+  position: absolute;
+  right: 0;
 }
 
 @font-face {
