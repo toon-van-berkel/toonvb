@@ -1,0 +1,48 @@
+.card-aboutme {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60px;
+    &__text {
+        color: black;
+    }
+    &__icon {
+        width: 60px;
+    }
+}
+
+.cardaboutme-one {
+    top: 50vh;
+    left: 30vw;
+}
+
+.cardaboutme-two {
+    top: 40vh;
+    left: 34vw;
+}
+
+.cardaboutme-three {
+    top: 30vh;
+    left: 38vw;
+}
+
+.cardaboutme-four {
+    top: 25vh;
+    left: 45vw;
+}
+
+.cardaboutme-five {
+    top: 30vh;
+    right: 45vw;
+}
+
+.cardaboutme-six {
+    top: 40vh;
+    right: 40vw;
+}
+
+.cardaboutme-seven {
+    top: 50vh;
+    right: 35vw;
+}

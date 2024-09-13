@@ -220,6 +220,62 @@ textarea {
   height: 5vh;
 }
 
+.about-me {
+  width: 20vw;
+  position: absolute;
+  bottom: 0;
+  left: 40vw;
+}
+
+.card-aboutme {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60px;
+}
+.card-aboutme__text {
+  color: black;
+}
+.card-aboutme__icon {
+  width: 60px;
+}
+
+.cardaboutme-one {
+  top: 50vh;
+  left: 30vw;
+}
+
+.cardaboutme-two {
+  top: 40vh;
+  left: 34vw;
+}
+
+.cardaboutme-three {
+  top: 30vh;
+  left: 38vw;
+}
+
+.cardaboutme-four {
+  top: 25vh;
+  left: 45vw;
+}
+
+.cardaboutme-five {
+  top: 30vh;
+  right: 45vw;
+}
+
+.cardaboutme-six {
+  top: 40vh;
+  right: 40vw;
+}
+
+.cardaboutme-seven {
+  top: 50vh;
+  right: 35vw;
+}
+
 @font-face {
   font-family: "UC";
   src: url("../font/Uniform Condensed Regular.ttf");
