@@ -18,3 +18,11 @@
     width: 500px;
     margin-bottom: 10px;
 }
+
+.pictures-projects {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

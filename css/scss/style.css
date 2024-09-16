@@ -274,11 +274,12 @@ textarea {
   border: rgb(208, 208, 208) solid 1px;
   border-radius: 20px;
   display: flex;
-  width: 41vw;
+  flex-direction: column;
+  width: 18vw;
   margin-bottom: 50px;
 }
 .project__img {
-  width: 25vw;
+  width: 100%;
   height: auto;
   margin-right: 40px;
 }
@@ -376,6 +377,14 @@ a {
 .side-image {
   width: 500px;
   margin-bottom: 10px;
+}
+
+.pictures-projects {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @font-face {

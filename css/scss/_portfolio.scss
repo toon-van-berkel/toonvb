@@ -9,11 +9,12 @@
     border: rgb(208, 208, 208) solid 1px;
     border-radius: 20px;
     display: flex;
-    width: 41vw;
+    flex-direction: column;
+    width: 18vw;
     margin-bottom: 50px;
 
     &__img {
-        width: 25vw;
+        width: 100%;
         height: auto;
         margin-right: 40px;
     }
