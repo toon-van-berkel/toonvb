@@ -1,0 +1,17 @@
+.not-active-msg {
+    background-color: #ffffffbb;
+    z-index: 2;
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    width: 18vw;
+    height: 53vh;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

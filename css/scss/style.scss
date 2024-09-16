@@ -6,27 +6,15 @@
 @import 'card';
 @import 'form';
 @import 'aboutme';
+@import 'notactive';
+@import 'portfolio';
 @import 'cardaboutme';
+@import 'btnlink';
 @import 'articles';
 @import 'font';
-button {
-    font-size: 20px;
-    padding: 5px 10px;
-    background-color: #A64B86;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
 
-.white-button {
-    background-color: white;
-    color: black;
-}
 
-a {
-    color: black;
-    text-decoration: none;
-}
+
 
 section {
     padding: 0 100px;

@@ -24,6 +24,12 @@ nav li {
   color: white;
 }
 
+.location {
+  display: flex;
+  margin-left: 100px;
+  margin-top: -20px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -31,10 +37,21 @@ footer {
   font-size: 20px;
 }
 
-body {
-  overflow: hidden;
+.free-footer {
+  position: relative;
+  width: 100%;
+}
+
+html, body {
+  height: 100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.scroll {
+  height: 120vh;
 }
 
 .body-bg {
@@ -64,13 +81,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "UCB";
-}
-
-.location {
-  position: absolute;
-  top: 120px;
-  display: flex;
-  margin-left: 100px;
 }
 
 h1 {
@@ -181,6 +191,7 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 40px;
+  z-index: 1;
 }
 
 form {
@@ -234,6 +245,46 @@ textarea {
   left: 40vw;
 }
 
+.not-active-msg {
+  background-color: rgba(255, 255, 255, 0.7333333333);
+  z-index: 2;
+  position: absolute;
+  top: 25vh;
+  left: 25vw;
+  width: 18vw;
+  height: 53vh;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  padding: 20px;
+  border: rgb(208, 208, 208) solid 1px;
+  border-radius: 20px;
+  display: flex;
+  width: 41vw;
+  margin-bottom: 50px;
+}
+.project__img {
+  width: 25vw;
+  height: auto;
+  margin-right: 40px;
+}
+.project__title {
+  font-size: 30px;
+}
 .card-aboutme {
   position: absolute;
   display: flex;
@@ -283,9 +334,27 @@ textarea {
   right: 35vw;
 }
 
-.scroll {
-  overflow-y: scroll;
-  height: auto;
+button {
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #A64B86;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.white-button {
+  background-color: white;
+  color: black;
+}
+
+.full-btn {
+  width: 100%;
 }
 
 .embed {
@@ -295,13 +364,18 @@ textarea {
 }
 
 .articles {
-  position: absolute;
   width: 60vw;
 }
 
 .pictures {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   right: 0;
+}
+
+.side-image {
+  width: 500px;
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -312,25 +386,6 @@ textarea {
   font-family: "UCB";
   src: url("../font/Uniform Condensed Bold.ttf");
 }
-button {
-  font-size: 20px;
-  padding: 5px 10px;
-  background-color: #A64B86;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.white-button {
-  background-color: white;
-  color: black;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
 section {
   padding: 0 100px;
 }

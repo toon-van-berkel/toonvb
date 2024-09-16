@@ -1,0 +1,24 @@
+.project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    padding: 20px;
+    border: rgb(208, 208, 208) solid 1px;
+    border-radius: 20px;
+    display: flex;
+    width: 41vw;
+    margin-bottom: 50px;
+
+    &__img {
+        width: 25vw;
+        height: auto;
+        margin-right: 40px;
+    }
+    &__title {
+        font-size: 30px;
+    }
+    &__description {}
+}
