@@ -387,6 +387,29 @@ a {
   justify-content: space-between;
 }
 
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  padding: 20px;
+  border: rgb(208, 208, 208) solid 1px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+  margin-bottom: 50px;
+}
+.project__img {
+  width: 100%;
+  height: auto;
+  margin-right: 40px;
+}
+.project__title {
+  font-size: 30px;
+}
 @font-face {
   font-family: "UC";
   src: url("../font/Uniform Condensed Regular.ttf");
