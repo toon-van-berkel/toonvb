@@ -286,6 +286,7 @@ textarea {
 .project__title {
   font-size: 30px;
 }
+
 .card-aboutme {
   position: absolute;
   display: flex;
@@ -410,6 +411,7 @@ a {
 .project__title {
   font-size: 30px;
 }
+
 @font-face {
   font-family: "UC";
   src: url("../font/Uniform Condensed Regular.ttf");
