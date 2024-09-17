@@ -266,7 +266,7 @@ textarea {
 .project-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .project {
@@ -276,12 +276,12 @@ textarea {
   display: flex;
   flex-direction: column;
   width: 18vw;
+  height: 40vh;
   margin-bottom: 50px;
 }
 .project__img {
   width: 100%;
   height: auto;
-  margin-right: 40px;
 }
 .project__title {
   font-size: 30px;
@@ -390,7 +390,7 @@ a {
 .project-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .project {
@@ -400,12 +400,12 @@ a {
   display: flex;
   flex-direction: column;
   width: 18vw;
+  height: 40vh;
   margin-bottom: 50px;
 }
 .project__img {
   width: 100%;
   height: auto;
-  margin-right: 40px;
 }
 .project__title {
   font-size: 30px;
