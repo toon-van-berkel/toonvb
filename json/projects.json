@@ -28,16 +28,18 @@
   },
   "animeKnow": {
     "projectTitle": "AnimeKnow",
-    "projectOverview": "AnimeShow is a streamlined alternative to 9Anime, designed to reduce the intrusive pop-ups and excessive ads that hinder user experience. It offers a much more user-friendly platform for streaming anime.",
-    "designPhilosophy": "The core idea of AnimeShow is ease of use, with minimal disruptions to the viewing experience. By featuring only one 30-second ad at the start of each episode or show, and a 1-minute ad for movies, users can enjoy uninterrupted streaming. The design emphasizes simplicity and accessibility, creating a clean and straightforward interface to make browsing and watching anime enjoyable.",
-    "developmentProcess": "AnimeShow was built with a focus on fast-loading pages and smooth navigation, utilizing modern web technologies to offer a seamless experience. Special attention was given to optimizing video streams while minimizing data usage, ensuring that users can access their favorite shows quickly and without hassle. The responsive design makes the site accessible on any device, catering to a wide range of users.",
-    "purposeAndInspiration": "The inspiration for AnimeShow came from the frustrations users face with existing anime streaming services, particularly the overwhelming number of ads. By simplifying the ad experience, AnimeShow provides an alternative that allows viewers to focus on the content while still supporting the site.",
+    "projectOverview": "AnimeKnow is an expansive online resource designed to provide detailed information about various anime shows and their characters. Inspired by the comprehensive scope of platforms like Fandom, AnimeKnow aims to serve as a streamlined, user-friendly database that caters to both casual fans and creators involved in producing fan-made content.",
+    "designPhilosophy": "The design of AnimeKnow is crafted to reflect the vibrant and dynamic world of anime. Utilizing a clean, modern aesthetic, the website features a structured layout that allows users to easily navigate through a vast array of anime series and character databases. The interface is built with accessibility in mind, ensuring that users can quickly find specific information with minimal effort.",
+    "developmentProcess": "Developing AnimeKnow involved creating a highly organized and scalable database to handle a growing repository of anime-related information. The website is developed using responsive web design techniques to ensure an optimal viewing experience across various devices. Interactive elements and search functionalities are implemented to provide a smooth and efficient user journey, from accessing character histories to exploring different anime genres.",
+    "purposeAndInspiration": "The inspiration for AnimeKnow came from recognizing the challenges fans often face when trying to access detailed and specific information about anime characters and stories, especially when creating 'what if' scenarios or fan fiction. By providing a comprehensive yet straightforward platform, AnimeKnow aims to support creative endeavors within the anime community by offering an easily navigable and reliable source of information. AnimeKnow is more than just a database; it's a tool designed to inspire and facilitate creativity among anime enthusiasts, enabling them to explore, imagine, and create with a rich background of information at their fingertips. This website is an essential resource for anyone looking to deepen their understanding of anime and its intricate universes.",
     "images": [
-      "../../img/AnimeShow.png",
-      "../../img/AnimeShow.Filter.png",
-      "../../img/AnimeShow.Schedule.png",
-      "../../img/AnimeShow.News.png",
-      "../../img/AnimeShow.Watch.Deathnote.png"
+      "../../img/AnimeKnow.png",
+      "../../img/AnimeKnow.Naruto.png",
+      "../../img/AnimeKnow.Naruto.Characters.png",
+      "../../img/AnimeKnow.Naruto.Characters.Search.Madara.png",
+      "../../img/AnimeKnow.Naruto.Characters.MadaraUchiha.png",
+      "../../img/AnimeKnow.Boruto.png",
+      "../../img/AnimeKnow.Boruto.Characters.png"
     ]
   }
 }

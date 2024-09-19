@@ -444,6 +444,12 @@ a {
   margin-bottom: 40px;
 }
 
+.tap {
+  position: absolute;
+  top: 120px;
+  right: 400px;
+}
+
 @font-face {
   font-family: "UC";
   src: url("../font/Uniform Condensed Regular.ttf");
