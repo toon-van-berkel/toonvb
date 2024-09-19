@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const projectName = params.get('project');
 
-    fetch('../../json/projects.json')
+    fetch('../../js/json/projects.json')
         .then(response => response.json())
         .then(data => {
             const project = data[projectName];
