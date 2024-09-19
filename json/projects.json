@@ -1,4 +1,14 @@
 {
+  "portfolioWebsiteOld": {
+    "projectTitle": "Portfolio Website Old",
+    "projectOverview": "The transition from my old portfolio website to a new, personalized domain, toonvb.com, represents a strategic move to enhance my online presence and showcase my work more effectively. The previous site served as a foundational platform but was constrained by limitations in customization and an unwieldy URL that impacted user experience and memorability.",
+    "designPhilosophy": "The decision to migrate to toonvb.com was driven by a desire for greater control over the site's functionality and aesthetics. The old website, while functional, did not offer the flexibility required to fully express my creative vision or adapt to evolving portfolio needs. Additionally, the URL of the old site was not intuitive, making it difficult for potential clients and collaborators to find and remember.",
+    "developmentProcess": "The new website, hosted at toonvb.com, is designed from the ground up with an emphasis on user experience and brand identity. It features a cleaner interface, improved navigation, and enhanced features such as a responsive design that ensures it looks great on all devices. This site not only better represents my professional image but also makes it easier for visitors to access and engage with my work.",
+    "purposeAndInspiration": "Owning a personal domain offers numerous benefits, including increased visibility, professional credibility, and the flexibility to customize every aspect of the website. It allows for a more memorable and professional web address that aligns with my branding efforts. Additionally, the new domain simplifies the process of updating and expanding the content as my portfolio grows and evolves. The move to toonvb.com marks a significant step forward in my professional journey, providing a robust platform that supports both current engagements and future opportunities. This new site not only reflects my skills and accomplishments but also sets the stage for further growth and connectivity in my career.",
+    "images": [
+      "../../img/portfolio-website-old.png"
+    ]
+  },
   "partyBus": {
     "projectTitle": "Party Bus",
     "projectOverview": "The Party Bus website is designed as a vibrant and engaging online hub for a unique service that offers a bus rental for various parties and events. The concept was born out of a desire to simplify the party-planning process while adding an element of fun and novelty.",

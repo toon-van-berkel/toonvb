@@ -13,12 +13,19 @@
     width: 18vw;
     height: 40vh;
     margin-bottom: 50px;
+    overflow: hidden;
 
     &__img {
         width: 100%;
-        height: auto;
+        height: 220px;
+        margin-bottom: 20px;
     }
     &__title {
+        border-top: 1px solid rgb(208, 208, 208);
         font-size: 30px;
     }
+}
+
+.card-project {
+    overflow: hidden;
 }
