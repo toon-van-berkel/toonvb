@@ -25,5 +25,19 @@
       "../../img/AnimeShow.News.png",
       "../../img/AnimeShow.Watch.Deathnote.png"
     ]
+  },
+  "animeKnow": {
+    "projectTitle": "AnimeKnow",
+    "projectOverview": "AnimeShow is a streamlined alternative to 9Anime, designed to reduce the intrusive pop-ups and excessive ads that hinder user experience. It offers a much more user-friendly platform for streaming anime.",
+    "designPhilosophy": "The core idea of AnimeShow is ease of use, with minimal disruptions to the viewing experience. By featuring only one 30-second ad at the start of each episode or show, and a 1-minute ad for movies, users can enjoy uninterrupted streaming. The design emphasizes simplicity and accessibility, creating a clean and straightforward interface to make browsing and watching anime enjoyable.",
+    "developmentProcess": "AnimeShow was built with a focus on fast-loading pages and smooth navigation, utilizing modern web technologies to offer a seamless experience. Special attention was given to optimizing video streams while minimizing data usage, ensuring that users can access their favorite shows quickly and without hassle. The responsive design makes the site accessible on any device, catering to a wide range of users.",
+    "purposeAndInspiration": "The inspiration for AnimeShow came from the frustrations users face with existing anime streaming services, particularly the overwhelming number of ads. By simplifying the ad experience, AnimeShow provides an alternative that allows viewers to focus on the content while still supporting the site.",
+    "images": [
+      "../../img/AnimeShow.png",
+      "../../img/AnimeShow.Filter.png",
+      "../../img/AnimeShow.Schedule.png",
+      "../../img/AnimeShow.News.png",
+      "../../img/AnimeShow.Watch.Deathnote.png"
+    ]
   }
 }
