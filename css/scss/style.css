@@ -412,6 +412,38 @@ a {
   font-size: 30px;
 }
 
+.image-gallery {
+  position: absolute;
+  right: 100px;
+  top: 150px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-image.visible {
+  opacity: 1;
+}
+
+.articles-project {
+  width: 50vw;
+}
+.articles-project__small_space {
+  margin-bottom: 5px;
+}
+.articles-project__space {
+  margin-bottom: 40px;
+}
+
 @font-face {
   font-family: "UC";
   src: url("../font/Uniform Condensed Regular.ttf");
