@@ -523,6 +523,7 @@ a {
 }
 
 .notification {
+  display: block;
   position: absolute;
   right: 5vw;
   top: 10vh;
