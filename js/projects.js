@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('designPhilosophy').textContent = project.designPhilosophy;
                 document.getElementById('developmentProcess').textContent = project.developmentProcess;
                 document.getElementById('purposeAndInspiration').textContent = project.purposeAndInspiration;
+                document.getElementById('projectTitleTitle').textContent = "Toonvb - " + project.projectTitle;
 
                 // Load images
                 const imageGallery = document.querySelector('.image-gallery');
