@@ -2,6 +2,7 @@
 @import 'footer';
 @import 'body';
 @import 'important';
+@import 'frequent';
 @import 'headers';
 @import 'card';
 @import 'form';
@@ -14,28 +15,7 @@
 @import 'portfolio';
 @import 'project';  
 @import 'font';
-
-
-
-
-section {
-    padding: 0 100px;
-}
-
-span {
-    color: #A64B86;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
+    
 .interest {
     display: flex;
     flex-direction: column;
