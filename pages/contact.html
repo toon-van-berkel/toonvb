@@ -21,36 +21,16 @@
         </ul>
     </nav>
     <section>
-        <div class="not-active">
-            <h2 class="not-active-msg">This is not active yet. To contact, please email 'toonvanberkel203@gmail.com'</h2>
-            <div class="contact-form">
-                <form action="submit_form.php" method="POST">
-                    <div class="form-group">
-                        <label for="name">
-                            <input type="text" id="name" name="name" placeholder="Name" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">
-                          <input type="email" id="email" name="email" placeholder="Email" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="title">
-                            <input type="text" id="title" name="title" placeholder="Title" required>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">
-                            <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
-                        </label>
-                    </div>
-                    <div class="form-group none-form">
-                        <button type="submit">SUBMIT</button>
-                    </div>
-                </form>
-                <p class="privacy-notice">Our Company does not save your information. Your privacy is very important to us.</p>
-            </div>
+        <div class="contact-form">
+            <h2>Contact me</h2>
+            <!-- modify this form HTML and place wherever you want your form -->
+            <form action="https://formspree.io/f/mzzplela" method="POST">
+                <label class="form-group">Your email:<input type="email" name="email"></label>
+                <label class="form-group">Your message:<textarea name="message"></textarea></label>
+                <!-- your other form fields go here -->
+                 <button type="submit">Send</button>
+            </form>
+            <p class="privacy-notice">I do not save your information. Your privacy is very important to me.</p>
         </div>
     </section>
     <footer>@copyrighted</footer>
