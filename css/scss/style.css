@@ -32,6 +32,7 @@ nav li {
 
 footer {
   position: absolute;
+  width: 100%;
   bottom: 0;
   margin: 50px 100px;
   font-size: 20px;
@@ -40,6 +41,12 @@ footer {
 .free-footer {
   position: relative;
   width: 100%;
+}
+
+.admin-login {
+  position: absolute;
+  right: 200px;
+  bottom: 0;
 }
 
 html, body {
@@ -81,6 +88,10 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "UCB";
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 section {
@@ -513,19 +524,27 @@ a {
 
 .notification {
   position: absolute;
-  left: 70vh;
-  top: 20vh;
-  background-color: rgb(58, 58, 58);
-  width: 40vh;
-  height: 35vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 5px;
+  right: 5vw;
+  top: 10vh;
+  background-color: #f3f3f3;
+  width: 30vw;
+  height: 13vh;
+  padding: 20px;
+  color: black;
+  border-radius: 15px;
 }
 
 .notification a {
   color: purple;
+}
+
+.notification-buttons {
+  margin-top: 20px;
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification-buttons button {
+  width: 12vw;
 }/*# sourceMappingURL=style.css.map */

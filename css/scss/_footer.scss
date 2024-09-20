@@ -1,5 +1,6 @@
 footer {
     position: absolute;
+    width: 100%;
     bottom: 0;
     margin: 50px 100px;
     font-size: 20px;
@@ -8,4 +9,10 @@ footer {
 .free-footer {
     position: relative;
     width: 100%;
+}
+
+.admin-login {
+    position: absolute;
+    right: 200px;
+    bottom: 0;
 }
