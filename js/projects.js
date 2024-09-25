@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             const project = data[projectName];
             if (project) {
-                document.getElementById('projectTitle').textContent = project.projectTitle;
+                document.getElementById('projectTitleLink').textContent = project.projectTitle;
                 document.getElementById('projectOverview').textContent = project.projectOverview;
+                document.getElementById('projectTitleHeader').textContent = project.projectTitle;
                 document.getElementById('designPhilosophy').textContent = project.designPhilosophy;
                 document.getElementById('developmentProcess').textContent = project.developmentProcess;
                 document.getElementById('purposeAndInspiration').textContent = project.purposeAndInspiration;
