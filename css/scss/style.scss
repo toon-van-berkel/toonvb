@@ -15,7 +15,6 @@
 @import 'portfolio';
 @import 'project';  
 @import 'font';
-@import 'responsive';
     
 .interest {
     display: flex;
@@ -56,3 +55,6 @@
 .notification-buttons button {
     width: 12vw;
 }
+
+
+@import 'responsive';
