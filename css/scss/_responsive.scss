@@ -1,65 +1,65 @@
-// @media only screen and (max-width: 768px) {
-//     nav {
-//         width: 100%;
-//         flex-direction: column;
-//         padding: 20px;
-//     }
+@media only screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
     
-//     nav ul {
-//         width: 100%;
-//         margin-left: 0;
-//         justify-content: center;
-//     }
+    nav ul {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
 
-//     .column, .row {
-//         flex-direction: column;
-//     }
+    .column, .row {
+        flex-direction: column;
+    }
 
-//     .card, .card-one, .card-two, .card-three {
-//         width: auto;
-//         margin-right: 0;
-//     }
+    .card, .card-one, .card-two, .card-three {
+        width: auto;
+        margin-right: 0;
+    }
 
-//     .me {
-//         position: static;
-//         width: 100%;
-//         margin-top: 20px;
-//     }
+    .me {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
 
-//     section, .card-container, .notification, .notification-buttons button {
-//         padding: 10px;
-//         width: 100%;
-//     }
-// }
+    section, .card-container, .notification, .notification-buttons button {
+        padding: 10px;
+        width: 100%;
+    }
+}
 
-// @media only screen and (max-width: 480px) {
-//     nav {
-//         padding: 10px;
-//     }
+@media only screen and (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
 
-//     nav h1, nav ul {
-//         text-align: center;
-//     }
+    nav h1, nav ul {
+        text-align: center;
+    }
 
-//     nav ul {
-//         flex-direction: column;
-//     }
+    nav ul {
+        flex-direction: column;
+    }
 
-//     .notification {
-//         top: 5vh;
-//         right: 0;
-//         left: 0;
-//         margin: 0 10px;
-//         width: auto;
-//     }
+    .notification {
+        top: 5vh;
+        right: 0;
+        left: 0;
+        margin: 0 10px;
+        width: auto;
+    }
 
-//     footer, .admin-login {
-//         text-align: center;
-//         position: static;
-//         padding: 20px 0;
-//     }
+    footer, .admin-login {
+        text-align: center;
+        position: static;
+        padding: 20px 0;
+    }
 
-//     .admin-login {
-//         margin-top: 10px;
-//     }
-// }
+    .admin-login {
+        margin-top: 10px;
+    }
+}
