@@ -6,35 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the world of Toon van Berkel, a passionate 17-year-old coder with a love for technology, travel, and fitness. Dive into my portfolio to see innovative projects, learn about my journey in IT, and connect with me to share ideas and experiences.">
     <title>Toonvb - Contact</title>
-    <link rel="stylesheet" href="../css/scss/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="icon" href="../img/round_logo-toonvb.png">
 </head>
 
-<body>
-    <div class="body-bg"></div>
-    <nav>
-        <h1><a href="../index.html " class="white-nav">TOONvb</a></h1>
-        <ul>
-            <li><a href="#"><button class="white-button">Professional</button></a></li>
-            <li><a href="./portfolio.html" class="white-nav">Portfolio</a></li>
-            <li><a href="./aboutme.html" class="white-nav">About me</a></li>
-            <li><a href="./contact.html" class="white-nav">Contact</a></li>
-        </ul>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container-fluid container-sm">
+            <a class="navbar-brand fw-bolder fs-3" href="../index.html">TOONvb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active text-light px-4 fw-bold rounded-1 mx-3"
+                        aria-current="page" href="#" style="background-color: #A64B86;">Professional</a>
+                    <a class="nav-link px-4 fw-bold" href="./portfolio.html">Portfolio</a>
+                    <a class="nav-link px-4 fw-bold" href="./aboutme.html">About me</a>
+                    <a class="nav-link px-4 fw-bold" href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
     </nav>
-    <section>
-        <div class="contact-form">
-            <h2>Contact me</h2>
-            <!-- modify this form HTML and place wherever you want your form -->
+    <section class="container my-5 d-flex justify-content-center align-items-center">
+        <div class="contact-form card p-4 shadow-sm" style="max-width: 600px; width: 100%;">
+            <h2 class="text-center mb-4">Contact me</h2>
             <form action="https://formspree.io/f/mzzplela" method="POST">
-                <label class="form-group">Your email:<input type="email" name="email"></label>
-                <label class="form-group">Your message:<textarea name="message"></textarea></label>
-                <!-- your other form fields go here -->
-                 <button type="submit">Send</button>
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label">Your email:</label>
+                    <input type="email" name="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="message" class="form-label">Your message:</label>
+                    <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn text-light" style="background-color: #A64B86;">Submit</button>
+                </div>
             </form>
-            <p class="privacy-notice">I do not save your information. Your privacy is very important to me.</p>
+            <p class="privacy-notice text-center mt-3">I do not save your information. Your privacy is very important to me.</p>
         </div>
     </section>
-    <footer>@copyrighted</footer>
+    <footer class="text-center text-lg-start mt-auto py-3">
+        <div class="container">
+            <span>&copy; Toon van Berkel</span> <a href="./backend/login.html">admin?</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
