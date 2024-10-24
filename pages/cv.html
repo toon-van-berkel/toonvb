@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +9,8 @@
     <title>Toonvb - CV</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="icon" href="./img/round_logo-toonvb.png">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.4/dist/gsap.min.js"></script>
 </head>
-
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light py-3">
         <div class="container-fluid container-sm">
@@ -22,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active text-light px-4 fw-bold rounded-1 mx-3" aria-current="page" href="#" style="background-color: #A64B86;">Professional</a>
+                    <a class="nav-link text-light px-4 fw-bold rounded-1 mx-3" href="#" style="background-color: #A64B86;">Professional</a>
                     <a class="nav-link px-4 fw-bold" href="./portfolio.html">Portfolio</a>
                     <a class="nav-link px-4 fw-bold active" href="./cv.html">CV</a>
                     <a class="nav-link px-4 fw-bold" href="./aboutme.html">About me</a>
@@ -32,10 +31,10 @@
         </div>
     </nav>
 
-    <section class="container mt-5">
+    <section class="container mt-5" id="aboutSection">
         <div class="row">
             <div class="col-md-5 text-center">
-                <img src="../img/profile.jpg" class="img-fluid mb-3" alt="Profile Image" style="max-width: 300px; min-width: 200px;">
+                <img src="../img/profile.jpg" class="img-fluid mb-3" alt="Profile Image" style="max-width: 300px; min-width: 200px;" id="profilePic">
                 <h2>Toon van Berkel</h2>
                 <h5>Web/App Developer</h5>
                 <p>Email: <a href="mailto:toonvanberkel203@gmail.com" class="text-decoration-none"  style="color: #A64B86;">toonvanberkel203@gmail.com</a></p>
@@ -44,10 +43,10 @@
             </div>
             <div class="col-md-7">
                 <h3>About Me</h3>
-                <p>Hi, I'm Toon van Berkel, a 17-year-old aspiring education software developer with a keen interest in creative media. From a young age, I've been fascinated by both programming and design, which has driven me to pursue this unique and dynamic field. </p><p>
-                    I am currently advancing my skills in HTML, CSS/SCSS, JavaScript, React, Pyhton and tools like Gimp, Github and Visual Studio. My dedication to learning and passion for technology has allowed me to fast-track my education, completing a typically three or four-year program in just two years. </p><p>
-                    In addition to my academic pursuits, I'm an active member of the scouting community. My involvement in scouting has taught me the importance of teamwork, leadership, and thinking outside the box—skills I apply in my approach to problem-solving and creativity in software development. </p><p>
-                    Looking ahead, I aspire to start my own business, where I can leverage my skills and innovative thinking to make a significant impact in the education technology sector. I'm constantly seeking new knowledge and opportunities to grow, and I'm excited about what the future holds.Feel free to connect with me—I’m always open to discussing new ideas, collaborations, or just sharing insights about the ever-evolving world of tech and education.</p>
+                <p>Hi, I'm Toon van Berkel, a 17-year-old aspiring education software developer with a keen interest in creative media. From a young age, I've been fascinated by both programming and design, which has driven me to pursue this unique and dynamic field.</p>
+                <p>I am currently advancing my skills in HTML, CSS/SCSS, JavaScript, React, Python, and tools like Gimp, GitHub, and Visual Studio. My dedication to learning and passion for technology has allowed me to fast-track my education, completing a typically three or four-year program in just two years.</p>
+                <p>In addition to my academic pursuits, I'm an active member of the scouting community. My involvement in scouting has taught me the importance of teamwork, leadership, and thinking outside the box—skills I apply in my approach to problem-solving and creativity in software development.</p>
+                <p>Looking ahead, I aspire to start my own business, where I can leverage my skills and innovative thinking to make a significant impact in the education technology sector. I'm constantly seeking new knowledge and opportunities to grow, and I'm excited about what the future holds. Feel free to connect with me—I’m always open to discussing new ideas, collaborations, or just sharing insights about the ever-evolving world of tech and education.</p>
             </div>
         </div>
         <hr>
@@ -55,7 +54,7 @@
             <h3>Skills</h3>
             <div class="row">
                 <div class="col-md-6">
-                    <ul>
+                    <ul id="skillSet1">
                         <li><strong>JavaScript:</strong> Advanced</li>
                         <li><strong>React.js:</strong> Advanced</li>
                         <li><strong>SAS:</strong> Advanced</li>
@@ -65,24 +64,24 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <ul>
+                    <ul id="skillSet2">
                         <li><strong>Automation:</strong> Advanced</li>
                         <li><strong>Python:</strong> Intermediate</li>
-                        <li><strong>Py game:</strong> Intermediate</li>
+                        <li><strong>Pygame:</strong> Intermediate</li>
                         <li><strong>Bootstrap:</strong> Intermediate</li>
                         <li><strong>Tailwind:</strong> Intermediate</li>
                     </ul>
                 </div>
             </div>
             <h3>Software</h3>
-            <ul>
+            <ul id="softwareSkills">
                 <li><strong>Visual Studio Code:</strong> Advanced</li>
                 <li><strong>Gimp:</strong> Advanced</li>
-                <li><strong>GitHub:</strong> Advanced</li>
+                <li><strong>GitHub:</strong> Advanced</li
                 <li><strong>Figma:</strong> Advanced</li>
                 <li><strong>Word:</strong> Advanced</li>
                 <li><strong>Excel:</strong> Advanced</li>
-                <li><strong>Powerpoint:</strong> Advanced</li>
+                <li><strong>PowerPoint:</strong> Advanced</li>
                 <li><strong>Trello:</strong> Advanced</li>
             </ul>
         </div>
@@ -121,7 +120,7 @@
 
                 <h3>Languages</h3>
                 <ul>
-                    <li>Dutch: Native</li>
+                    <li>Dutch: Native</li
                     <li>English: Professional working proficiency</li>
                 </ul>
             </div>
@@ -133,7 +132,7 @@
         </div>
     </footer>
 
+    <script src="../js/gsaptwo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
