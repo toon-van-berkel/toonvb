@@ -1,9 +1,10 @@
 {
     "portugal": {
+        "destinationOverview": "A beautiful destination overview.",
         "destinationTitle": "Portugal",
-        "destinationOverview": "Lorem Ipsum",
-        "experienceHighlights": "Lorem Ipsum",
-        "memorableMoments": "Lorem Ipsum",
+        "experienceHighlights": "Highlights of experiences in Portugal.",
+        "memorableMoments": "Memorable moments from Portugal.",
+        "projectTitle": "Portugal Travel Project",
         "images": [
             "../../img/family-portugal.jpg",
             "../../img/toonandstan-portugal.jpg"

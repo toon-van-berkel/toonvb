@@ -35,6 +35,7 @@
     overflow: hidden;
 }
 
+
 .gallery-image {
     display: none;
     position: absolute;
@@ -44,8 +45,10 @@
     height: auto;
     opacity: 0;
     transition: opacity 0.5s ease;
+    
 }
 
-.gallery-image:first-child {
+.gallery-image.visible {
     display: block;
+    opacity: 1;
 }

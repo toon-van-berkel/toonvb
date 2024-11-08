@@ -38,7 +38,6 @@ function initializeGallery() {
     if (images.length > 0) {
         let currentIndex = 0;
         images[currentIndex].classList.add('visible');
-
         images.forEach(img => {
             img.addEventListener('click', function () {
                 images[currentIndex].classList.remove('visible');
