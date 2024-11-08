@@ -1,0 +1,12 @@
+{
+    "portugal": {
+        "destinationTitle": "Portugal",
+        "destinationOverview": "Lorem Ipsum",
+        "experienceHighlights": "Lorem Ipsum",
+        "memorableMoments": "Lorem Ipsum",
+        "images": [
+            "../../img/family-portugal.jpg",
+            "../../img/toonandstan-portugal.jpg"
+        ]
+    }
+}

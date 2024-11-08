@@ -1,8 +1,6 @@
-
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D'http://www.w3.org/2000/svg' viewBox%3D'0 0 30 30'%3E%3Cpath stroke%3D'rgb(255, 255, 255)' stroke-width%3D'2' stroke-linecap%3D'round' stroke-miterlimit%3D'10' d%3D'M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
 
 .timeline::after {
     content: '';
@@ -28,4 +26,26 @@
     height: 15px;
     border-radius: 50%;
     background-color: #A64B86;
+}
+
+.image-gallery {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.gallery-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-image:first-child {
+    display: block;
 }
