@@ -6,6 +6,7 @@
     position: absolute;
     pointer-events: none;
     transition: transform 0.1s ease;
+    z-index: 9;
 }
 
 .custom-cursor img {
