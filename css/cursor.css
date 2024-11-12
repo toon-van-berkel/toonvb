@@ -1,0 +1,14 @@
+* {
+    cursor: none;
+}
+
+.custom-cursor {
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+}
+
+.custom-cursor img {
+    width: 30px;
+    transform-origin: center;
+}
