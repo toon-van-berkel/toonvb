@@ -1,3 +1,10 @@
+gsap.from(".navbar", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: "power2.out"
+});
+
 gsap.from('#profilePic', {
     duration: 1.5,
     opacity: 0,
@@ -26,4 +33,16 @@ gsap.from('#softwareSkills li', {
     opacity: 0,
     stagger: 0.1,
     delay: 0.5
+});
+
+gsap.from("footer", {
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: "footer",
+        start: "top 90%",
+        toggleActions: "play none none none"
+    }
 });
