@@ -52,3 +52,8 @@
     display: block;
     opacity: 1;
 }
+
+.project__img {
+    height: auto;
+    object-fit: fill;
+}
