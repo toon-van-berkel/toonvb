@@ -1,7 +1,21 @@
-gsap.from(".navbar", {
+gsap.from("nav", {
     duration: 1,
     y: -50,
     opacity: 0,
+    ease: "power2.out"
+});
+
+gsap.from("h1, h2, h3, h4, h5, p, a, span, button, li", {
+    duration: 1.2,
+    x: -30,
+    opacity: 0,
+    ease: "power2.out"
+});
+
+gsap.from("img, .image-gallery", {
+    duration: 1.5,
+    opacity: 0,
+    scale: 0.95,
     ease: "power2.out"
 });
 
@@ -12,21 +26,6 @@ gsap.from("footer", {
     ease: "power2.out",
     scrollTrigger: {
         trigger: "footer",
-        start: "top 90%",
-        toggleActions: "play none none none"
+        start: "top 90%"
     }
-});
-
-gsap.from("#profileImage", {
-    duration: 1.5,
-    scale: 0.5,
-    opacity: 0,
-    ease: "elastic.out(1.5, 1)"
-});
-
-gsap.from("#card1, #card2, #card3, #card4, #card5", {
-    duration: 1,
-    x: -200,
-    opacity: 0,
-    stagger: 0.2
 });
