@@ -21,7 +21,7 @@
         <div class="position-relative z-1 min-vh-100">
             <nav class="navbar navbar-expand-lg navbar-light py-3">
                 <div class="container-fluid container-sm">
-                    <a class="navbar-brand text-white" href="../index.html"><h1 class="fw-bolder fs-3">TOONvb</h1></a>
+                    <a class="navbar-brand" href="../index.html"><span class="fw-bolder fs-3 text-white">TOONvb</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -33,29 +33,32 @@
                             <a class="nav-link px-4 fw-bold text-white" href="./portfolio.html">Portfolio</a>
                             <a class="nav-link px-4 fw-bold text-white" href="./cv.html">CV</a>
                             <a class="nav-link px-4 fw-bold text-white" href="./aboutme.html">About me</a>
-                            <a class="nav-link px-4 fw-bold text-white active" href="./contact.html">Contact</a>
+                            <a class="nav-link active px-4 fw-bold text-white" href="./contact.html">Contact</a>
                         </div>
                     </div>
                 </div>
             </nav>
 
-            <section class="container my-5 d-flex justify-content-start align-items-center">
-                <div class="contact-form card p-4 shadow-sm" style="max-width: 600px; width: 100%; background: rgba(255, 255, 255, 0.8);">
-                    <h2 class="text-center mb-4">Contact me</h2>
-                    <form action="https://formspree.io/f/mzzplela" method="POST">
-                        <div class="form-group mb-3">
-                            <label for="email" class="form-label">Your email:</label>
-                            <input type="email" name="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="message" class="form-label">Your message:</label>
-                            <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn text-light" style="background-color: #A64B86;">Submit</button>
-                        </div>
-                    </form>
-                    <p class="privacy-notice text-center mt-3">I do not save your information. Your privacy is very important to me.</p>
+            <section class="container my-5">
+                <h1 class="fw-bolder mb-5 text-white" style="font-size: 30px;">Get in Touch – Contact Toon van Berkel</h1>
+                <div class="d-flex justify-content-start align-items-center">
+                    <div class="contact-form card p-4 shadow-sm" style="max-width: 600px; width: 100%; background: rgba(255, 255, 255, 0.8);">
+                        <h2 class="text-center mb-4">Contact me</h2>
+                        <form action="https://formspree.io/f/mzzplela" method="POST">
+                            <div class="form-group mb-3">
+                                <label for="email" class="form-label">Your email:</label>
+                                <input type="email" name="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="message" class="form-label">Your message:</label>
+                                <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn text-light" style="background-color: #A64B86;">Submit</button>
+                            </div>
+                        </form>
+                        <p class="privacy-notice text-center mt-3">I do not save your information. Your privacy is very important to me.</p>
+                    </div>
                 </div>
             </section>
             <footer class="text-center text-lg-start mt-auto py-3 text-white w-100 position-absolute bottom-0">
