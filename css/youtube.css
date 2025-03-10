@@ -33,6 +33,17 @@
     font-weight: bold;
 }
 
+.videoCount {
+    color: black;
+    background-color: rgba(128, 128, 128, 0.237);
+    width: 30%;
+    text-align: right;
+    padding: 0 10px 0 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 @media screen and (max-width: 991px) {
     .channel-banner {
         background-image: url('../img/channel-banner.jpg');
