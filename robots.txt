@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /backend/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login.html
+Allow: /
+
+Sitemap: https://toonvb.com/sitemap.xml
