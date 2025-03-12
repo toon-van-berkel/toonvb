@@ -14,16 +14,6 @@
     margin-bottom: 1.5rem;
 }
 
-.timeline-marker {
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #A64B86;
-}
-
 .image-gallery {
     position: relative;
     width: 100%;
@@ -51,4 +41,22 @@
 .project__img {
     height: auto;
     object-fit: fill;
+}
+
+.button {
+    background-color: #A64B86;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.button:hover {
+    color: #A64B86;
+    background-color: white;
+    border: 1px #A64B86 solid;
 }

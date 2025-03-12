@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="icon" href="../img/round_logo-toonvb.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <style>
+        .navbar-toggler {
+            border: white 1px solid!important;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -19,7 +24,7 @@
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('../img/Banner-contact.jpg'); background-size: cover; background-position: center;"></div>
         <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
         <div class="position-relative z-1 min-vh-100">
-            <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top">
                 <div class="container-fluid container-sm">
                     <a class="navbar-brand" href="../index.html"><span class="fw-bolder fs-3 text-white">TOONvb</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -39,7 +44,7 @@
                 </div>
             </nav>
 
-            <section class="container my-5">
+            <div class="container mt-3 mb-5">
                 <h1 class="fw-bolder mb-5 text-white" style="font-size: 30px;">Get in Touch – Contact Toon van Berkel</h1>
                 <div class="d-flex justify-content-start align-items-center">
                     <div class="contact-form card p-4 shadow-sm" style="max-width: 600px; width: 100%; background: rgba(255, 255, 255, 0.8);">
@@ -60,7 +65,7 @@
                         <p class="privacy-notice text-center mt-3">I do not save your information. Your privacy is very important to me.</p>
                     </div>
                 </div>
-            </section>
+            </div>
             <footer class="text-center text-lg-start mt-auto py-3 text-white w-100 position-absolute bottom-0">
                 <div class="container">
                     <span>&copy; Toon van Berkel</span> <a href="../backend/login.html" style="color: #A64B86;" target="_blank">admin?</a>
