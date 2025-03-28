@@ -20,59 +20,62 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <div class="position-relative min-vh-100">
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('../img/Banner-contact.jpg'); background-size: cover; background-position: center;"></div>
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
-        <div class="position-relative z-1 min-vh-100">
-            <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top">
-                <div class="container-fluid container-sm">
-                    <a class="navbar-brand" href="../index.html"><span class="fw-bolder fs-3 text-white">TOONvb</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav ms-auto">
-                            <a class="nav-link active text-white px-4 fw-bold rounded-1 mx-3"
-                                aria-current="page" href="./Professional.html" style="background-color: #A64B86;">Professional</a>
-                            <a class="nav-link px-4 fw-bold text-white" href="./portfolio.html">Portfolio</a>
-                            <a class="nav-link px-4 fw-bold text-white" href="./cv.html">CV</a>
-                            <a class="nav-link px-4 fw-bold text-white" href="./aboutme.html">About me</a>
-                            <a class="nav-link active px-4 fw-bold text-white" href="./contact.html">Contact</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="container mt-3 mb-5">
-                <h1 class="fw-bolder mb-5 text-white" style="font-size: 30px;">Get in Touch – Contact Toon van Berkel</h1>
-                <div class="d-flex justify-content-start align-items-center">
-                    <div class="contact-form card p-4 shadow-sm" style="max-width: 600px; width: 100%; background: rgba(255, 255, 255, 0.8);">
-                        <h2 class="text-center mb-4">Contact me</h2>
-                        <form action="https://formspree.io/f/mzzplela" method="POST">
-                            <div class="form-group mb-3">
-                                <label for="email" class="form-label">Your email:</label>
-                                <input type="email" name="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="message" class="form-label">Your message:</label>
-                                <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn text-light" style="background-color: #A64B86;">Submit</button>
-                            </div>
-                        </form>
-                        <p class="privacy-notice text-center mt-3">I do not save your information. Your privacy is very important to me.</p>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top bg-white" style="border-bottom: #a64b866c 1px solid;">
+        <div class="container-fluid container-sm">
+            <a class="navbar-brand" href="../../index.html"><span class="fw-bolder fs-3">TOONvb</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link text-light px-4 fw-bold rounded-1 mx-3" href="./Professional.html" style="background-color: #A64B86;">Professional</a>
+                    <a class="nav-link px-4 fw-bold" href="./portfolio.html">Portfolio</a>
+                    <a class="nav-link px-4 fw-bold" href="./cv.html">CV</a>
+                    <a class="nav-link px-4 fw-bold" href="./aboutme.html">About me</a>
+                    <a class="nav-link px-4 fw-bold active" href="./contact.html">Contact</a>
                 </div>
             </div>
-            <footer class="text-center text-lg-start mt-auto py-3 text-white w-100 position-absolute bottom-0">
-                <div class="container">
-                    <span>&copy; Toon van Berkel</span> <a href="../backend/login.html" style="color: #A64B86;" target="_blank">admin?</a>
-                </div>
-            </footer>
         </div>
-    </div>
+    </nav>
+
+    <section>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('../img/Banner-contact.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="container mt-3 mb-5">
+            <h1 class="fw-bolder mb-5 text-white" style="font-size: 30px;">Get in Touch – Contact Toon van Berkel</h1>
+            <div class="d-flex justify-content-start align-items-center">
+                <div class="contact-form card p-4 shadow-sm" style="max-width: 600px; width: 100%; background: rgba(255, 255, 255, 0.8);">
+                    <h2 class="text-center mb-4">Contact Toon van Berkel</h2>
+                    <form action="https://formspree.io/f/mzzplela" method="POST">
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Your email:</label>
+                            <input type="email" name="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="message" class="form-label">Your message:</label>
+                            <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn text-light" style="background-color: #A64B86;">Send Message</button>
+                        </div>
+                    </form>
+                    <p class="privacy-notice text-center mt-3">Toon van Berkel values your privacy and does not store personal data submitted through this form.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer mt-auto py-3 bg-white fixed-bottom" style="border-top: #a64b866c 1px solid;">
+        <div class="container-fluid container-sm d-flex justify-content-between align-items-center px-3">
+            <div>
+                <span>&copy; <strong>Toon van Berkel</strong> — All rights reserved.</span>
+                <a href="../backend/login.html" class="text-decoration-none ms-2" style="color: #A64B86;" target="_blank" rel="noopener">Admin Panel</a>
+            </div>
+            <div class="text-end">
+                <span>Contact: <a href="mailto:toonvanberkel@toonvb.com" style="color: #A64B86;">toonvanberkel@toonvb.com</a></span>
+            </div>
+        </div>
+    </footer>
 
     <script src="../js/gsap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

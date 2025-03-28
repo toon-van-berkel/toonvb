@@ -14,23 +14,25 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top bg-white" style="border-bottom: #a64b866c 1px solid;">
         <div class="container-fluid container-sm">
-            <a class="navbar-brand" href="../index.html"><h1 class="fw-bolder fs-3">TOONvb</h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="../../index.html"><span class="fw-bolder fs-3">TOONvb</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active text-light px-4 fw-bold rounded-1 mx-3" aria-current="page" href="./Professional.html" style="background-color: #A64B86;">Professional</a>
-                    <a class="nav-link px-4 fw-bold" href="./Portfolio.html">Portfolio</a>
-                    <a class="nav-link px-4 fw-bold" href="./aboutme.html">About me</a>
+                    <a class="nav-link text-light px-4 fw-bold rounded-1 mx-3" href="./Professional.html" style="background-color: #A64B86;">Professional</a>
+                    <a class="nav-link px-4 fw-bold" href="./portfolio.html">Portfolio</a>
                     <a class="nav-link px-4 fw-bold" href="./cv.html">CV</a>
+                    <a class="nav-link px-4 fw-bold" href="./aboutme.html">About me</a>
                     <a class="nav-link px-4 fw-bold" href="./contact.html">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
+
     <div class="container mt-3">
         <p class="text-muted">
             <a href="./aboutme.html" class="text-decoration-none" style="color: #A64B86;">About me</a> <span>/</span>
@@ -38,7 +40,8 @@
             <a href="./scouting.html" class="text-decoration-none" style="color: #A64B86;">Gallery</a>
         </p>
     </div>
-    <div class="container">
+    
+    <div class="container mb-5" style="margin-bottom: 80px;">
         <div class="row g-4">
             <div class="col-md-4">
                 <a href="https://www.instagram.com/toon.jamboree_and_moot/" target="_blank">
@@ -56,9 +59,16 @@
             </div>
         </div>
     </div>
-    <footer class="text-center text-lg-start mt-auto py-3">
-        <div class="container">
-            <span>&copy; Toon van Berkel</span> <a href="../backend/login.html" style="color: #A64B86;" target="_blank">admin?</a>
+
+    <footer class="footer mt-auto py-3 bg-white fixed-bottom" style="border-top: #a64b866c 1px solid;">
+        <div class="container-fluid container-sm d-flex justify-content-between align-items-center px-3">
+            <div>
+                <span>&copy; <strong>Toon van Berkel</strong> — All rights reserved.</span>
+                <a href="../backend/login.html" class="text-decoration-none ms-2" style="color: #A64B86;" target="_blank" rel="noopener">Admin Panel</a>
+            </div>
+            <div class="text-end">
+                <span>Contact: <a href="mailto:toonvanberkel@toonvb.com" style="color: #A64B86;">toonvanberkel@toonvb.com</a></span>
+            </div>
         </div>
     </footer>
 

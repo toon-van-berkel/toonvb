@@ -14,18 +14,17 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-lg-top bg-white" style="border-bottom: #a64b866c 1px solid;">
         <div class="container-fluid container-sm">
-            <a class="navbar-brand" href="../index.html"><span class="fw-bolder fs-3">TOONvb</span></a>
+            <a class="navbar-brand" href="../../index.html"><span class="fw-bolder fs-3">TOONvb</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link text-light px-4 fw-bold rounded-1 mx-3"
-                        aria-current="page" href="./Professional.html" style="background-color: #A64B86;">Professional</a>
-                    <a class="nav-link active px-4 fw-bold" href="./portfolio.html">Portfolio</a>
+                    <a class="nav-link text-light px-4 fw-bold rounded-1 mx-3" href="./Professional.html" style="background-color: #A64B86;">Professional</a>
+                    <a class="nav-link px-4 fw-bold active" href="./portfolio.html">Portfolio</a>
                     <a class="nav-link px-4 fw-bold" href="./cv.html">CV</a>
                     <a class="nav-link px-4 fw-bold" href="./aboutme.html">About me</a>
                     <a class="nav-link px-4 fw-bold" href="./contact.html">Contact</a>
@@ -34,9 +33,13 @@
         </div>
     </nav>
 
-    <section class="container mt-3 mb-5">
-        <h1 class="fw-bolder mb-5" style="font-size: 30px;">Toon van Berkel's Web Development & Software Engineering Portfolio</h1>
-        <div class="row g-3">
+    <section class="container mt-3" style="margin-bottom: 80px;">
+        <h1 class="fw-bolder mb-2" style="font-size: 30px;">Web Development & Software Engineering Projects by Toon van Berkel</h1>
+        <p class="mb-5">
+            This portfolio showcases the diverse range of projects created by Toon van Berkel — a passionate developer focused on innovation, performance, and creativity.
+            From frontend designs to full-stack applications, each project reflects practical solutions and real-world experience in modern web technologies such as React, MERN, JavaScript, and more.
+        </p>
+        <div class="row g-3">    
             <div class="col-md-6 col-lg-3">
                 <a href="./projects/ElectroVibe.html" class="text-decoration-none text-dark">
                     <article class="project card border-0 shadow-sm h-100">
@@ -128,11 +131,19 @@
             </div>
         </div>
     </section>
-    <footer class="text-center text-lg-start py-3">
-        <div class="container">
-            <span>&copy; Toon van Berkel</span> <a href="../backend/login.html" style="color: #A64B86;" target="_blank">admin?</a>
+
+    <footer class="footer mt-auto py-3 bg-white fixed-bottom" style="border-top: #a64b866c 1px solid;">
+        <div class="container-fluid container-sm d-flex justify-content-between align-items-center px-3">
+            <div>
+                <span>&copy; <strong>Toon van Berkel</strong> — All rights reserved.</span>
+                <a href="../backend/login.html" class="text-decoration-none ms-2" style="color: #A64B86;" target="_blank" rel="noopener">Admin Panel</a>
+            </div>
+            <div class="text-end">
+                <span>Contact: <a href="mailto:toonvanberkel@toonvb.com" style="color: #A64B86;">toonvanberkel@toonvb.com</a></span>
+            </div>
         </div>
     </footer>
+
     <script src="../js/gsap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>

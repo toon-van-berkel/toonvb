@@ -60,3 +60,7 @@
     background-color: white;
     border: 1px #A64B86 solid;
 }
+
+footer {
+    z-index: 9999;
+}
