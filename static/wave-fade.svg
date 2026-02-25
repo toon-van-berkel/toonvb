@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" preserveAspectRatio="none">
+  <defs>
+    <filter id="feather" x="-8%" y="-8%" width="116%" height="116%">
+      <!-- zachtheid van de rand -->
+      <feGaussianBlur stdDeviation="7"></feGaussianBlur>
+    </filter>
+  </defs>
+
+  <!-- Transparante achtergrond, witte shape = zichtbaar (alpha mask) -->
+  <path filter="url(#feather)" fill="white" d="
+      M 0 38
+      C 120 18, 220 60, 340 40
+      C 460 18, 560 62, 680 42
+      C 800 22, 900 55, 1000 40
+
+      L 1000 360
+
+      C 880 390, 760 330, 640 356
+      C 520 386, 420 334, 300 356
+      C 180 388, 90 345, 0 360
+      Z
+    "></path>
+</svg>

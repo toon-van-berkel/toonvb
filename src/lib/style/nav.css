@@ -1,0 +1,117 @@
+.nav{
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+}
+
+.nav__inner{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.nav__brand a{
+    font-size: 2em;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.nav__toggle{
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+}
+.nav__toggle:hover{ cursor: pointer; }
+
+.nav__toggle img{
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.nav__links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav__links a{
+    display: inline-block;
+    padding: 10px 20px;
+
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    transition: 
+        border-color 180ms ease,
+        transform 180ms ease,
+        background-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.nav__links a:hover{
+    text-shadow: 0 0 0.6px currentColor;
+    border-color: var(--primary-text);
+    transform: translateY(-1px);
+    background-color: rgba(57, 46, 30, 0.06);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 800px){
+    .nav__brand a{ font-size: 1.7em; }
+    .nav__links a{ padding: 9px 14px; }
+}
+
+@media (max-width: 700px){
+    .nav__toggle{ display: block; }
+
+    .nav__links{
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 78px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+
+        padding: 12px;
+        border-radius: 16px;
+        background: rgba(182, 169, 149, 0.92);
+        border: 1px solid rgba(57, 46, 30, 0.14);
+        box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+
+        opacity: 0;
+        transform: translateY(-8px);
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: opacity 180ms ease, transform 180ms ease, visibility 0ms linear 180ms;
+    }
+
+    .nav__links.open{
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        pointer-events: auto;
+        transition: opacity 180ms ease, transform 180ms ease, visibility 0ms;
+    }
+
+    .nav__links a{
+        padding: 14px 14px;
+        width: 100%;
+    }
+}
