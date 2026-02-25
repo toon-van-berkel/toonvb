@@ -14,11 +14,7 @@
     --page-bg: #B6A995;
     --card-bg: #846136;
     --primary-text: #392E1E;
-
-    --a: #B6A995;
-    --b: #846136;
-    --c: #392E1E;
-    --d: #5E3F20;
+    --line: #5E3F20;
 }
 
 body {
@@ -50,9 +46,21 @@ section.normal {
     margin: 0 auto;
 }
 
+.line {
+    padding: 20px 0;
+    width: 100%;
+}
+hr {
+    margin: 0 auto;
+    max-width: 1100px;
+    border-color: var(--line);
+    box-shadow: 5px 5px 10px 2px #5E3F2050;
+}
 
 @media screen and (width < 1300px) {
     section.normal {
         margin-top: 40px;
     }
 }
+
+/* box-shadow: h-offset v-offset blur spread color inset; */

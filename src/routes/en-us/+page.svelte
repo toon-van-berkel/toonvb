@@ -35,4 +35,6 @@
             </div>
         </div>
     </section>
+
+    <div class="line"><hr></div>
 </main>
