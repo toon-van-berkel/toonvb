@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url("banner.css");
 @import url("nav.css");
+@import url("banner.css");
+@import url("cards.css");
 
 .plus-jakarta-sans-100 {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -11,7 +12,13 @@
 
 :root{
     --page-bg: #B6A995;
+    --card-bg: #846136;
     --primary-text: #392E1E;
+
+    --a: #B6A995;
+    --b: #846136;
+    --c: #392E1E;
+    --d: #5E3F20;
 }
 
 body {

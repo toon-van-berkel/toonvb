@@ -28,12 +28,11 @@
                 name a few. He enjoys the variety that comes with creating new things; if 
                 it’s always the same, it’s simply not for him.
             </p>
+            <div class="cards">
+                <div class="cards__card">
+                    <img src="{base}/genre/Coding.png" alt="coding">
+                </div>
+            </div>
         </div>
     </section>
 </main>
-<!-- 
- #B6A995
- #846136
- #392E1E
- #5E3F20
-  -->
