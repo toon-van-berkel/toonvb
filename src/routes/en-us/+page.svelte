@@ -20,7 +20,7 @@
     </section>
 
     <section class="normal">
-        <div class="section">            
+        <div class="section">
             <h2>Projects</h2>
             <p>
                 Toon van Berkel has worked on a wide range of projects—coding, photography, 
@@ -29,9 +29,9 @@
                 it’s always the same, it’s simply not for him.
             </p>
             <div class="cards">
-                <div class="cards__card">
+                <a href="{base}/en-us/interests/coding" class="cards__card">
                     <img src="{base}/genre/Coding.png" alt="coding">
-                </div>
+                </a>
             </div>
         </div>
     </section>

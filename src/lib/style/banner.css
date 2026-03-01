@@ -9,7 +9,6 @@
     z-index: 3;
     background: var(--page-bg);
 }
-
 .banner__text {
     position: absolute;
     inset: 0;
@@ -21,7 +20,6 @@
     padding: clamp(1rem, 3vw, 2.5rem);
     text-align: center;
 }
-
 .banner__card {
     width: 40%;
     padding-top: 100px;
@@ -49,10 +47,9 @@
     line-height: 1.55;
     opacity: 0.86;
 }
-
-.banner__img{
-    width:100%;
-    height:auto;
+.banner__img {
+    width: 100%;
+    height: auto;
     max-height: 1000px;
 
     display:block;
@@ -72,9 +69,8 @@
 
     opacity: 0.5;
 }
-
 .banner::before,
-.banner::after{
+.banner::after {
     height: 110px;
 
     position:absolute;
@@ -87,16 +83,14 @@
     content:"";
     pointer-events: none;
 }
-
-.banner::before{
+.banner::before {
     top:-10px;
     background:
         linear-gradient(to bottom, var(--page-bg) 0%, transparent 75%),
         radial-gradient(120px 40px at 18% 35%, var(--page-bg) 0%, transparent 70%),
         radial-gradient(160px 50px at 72% 25%, var(--page-bg) 0%, transparent 70%);
 }
-
-.banner::after{
+.banner::after {
     bottom:-10px;
     background:
         linear-gradient(to top, var(--page-bg) 0%, transparent 75%),

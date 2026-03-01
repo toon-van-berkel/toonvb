@@ -5,7 +5,9 @@
     top: 0;
     z-index: 4;
 }
-
+.nav a {
+    color: var(--primary-text);
+}
 .nav__inner{
     width: 100%;
     max-width: 1100px;
@@ -17,7 +19,7 @@
     gap: 14px;
 }
 
-.nav__brand a{
+.nav__brand a {
     font-size: 2em;
     font-weight: 900;
     text-decoration: none;
@@ -47,7 +49,7 @@
     flex-wrap: wrap;
 }
 
-.nav__links a{
+.nav__links a {
     display: inline-block;
     padding: 10px 20px;
 
@@ -62,7 +64,7 @@
         box-shadow 180ms ease;
 }
 
-.nav__links a:hover{
+.nav__links a:hover {
     text-shadow: 0 0 0.6px currentColor;
     border-color: var(--primary-text);
     transform: translateY(-1px);
