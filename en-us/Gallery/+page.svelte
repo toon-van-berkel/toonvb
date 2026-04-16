@@ -4,7 +4,7 @@
 
 <main>
     <section class="banner s-banner">
-        <img src="{base}/Banner-coding.png" alt="Banner" class="banner__img" />
+        <img src="{base}/gallery/banner.png" alt="Banner" class="banner__img" />
     </section>
 
     <section class="normal">

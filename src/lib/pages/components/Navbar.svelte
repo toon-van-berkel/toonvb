@@ -11,6 +11,9 @@
     }
 </script>
 
+<nav class="nav-top">
+
+</nav>
 <nav class="nav">
     <div class="nav__inner">
         <span class="nav__brand"><a href="{base}/">Toonvb.com</a></span>
@@ -26,10 +29,10 @@
         </button>
 
         <ul class={"nav__links " + (menuOpen ? "open" : "")}>
-            <li><a href="{base}/" onclick={closeMenu}>Projects</a></li>
-            <li><a href="{base}/en-us/Gallery" onclick={closeMenu}>Gallery</a></li>
-            <li><a href="{base}/" onclick={closeMenu}>Who am i?</a></li>
-            <li><a href="{base}/" onclick={closeMenu}>Contact</a></li> 
+            <li><a href="{base}/" onclick={closeMenu}>                  Projects    </a></li>
+            <li><a href="{base}/en-us/Gallery" onclick={closeMenu}>     Gallery     </a></li>
+            <li><a href="{base}/" onclick={closeMenu}>                  Who am i?   </a></li>
+            <li><a href="{base}/" onclick={closeMenu}>                  Contact     </a></li> 
         </ul>
     </div>
 </nav>

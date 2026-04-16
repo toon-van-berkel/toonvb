@@ -1,4 +1,4 @@
-<svelte:head>
+<!-- <svelte:head>
 	<title>404 | Page Not Found</title>
 	<meta
 		name="description"
@@ -101,4 +101,17 @@
 		border-color: rgba(255, 255, 255, 0.2);
 		font-weight: 600;
 	}
-</style>
+</style> -->
+
+<svelte:head>
+	<title>404 | Page Not Found</title>
+	<meta name="description"
+		content="The page you are looking for could not be found."
+	/>
+</svelte:head>
+
+<script lang="ts">
+    import Error from "../../src/routes/+error.svelte";
+</script>
+
+<Error/>
