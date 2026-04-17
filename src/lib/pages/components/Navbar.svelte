@@ -1,38 +1,68 @@
 <script lang="ts">
-    import { base } from "$app/paths";
-    let menuOpen = false;
+	import { base } from '$app/paths';
+	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
+	import { content } from '$lib/typescript/content/components/navbar';
 
-    function toggleMenu() {
-        menuOpen = !menuOpen;
-    }
+	let menuOpen = $state(false);
 
-    function closeMenu() {
-        menuOpen = false;
-    }
+	const navContent = $derived(
+		content[$currentLanguage] ?? content[defaultLanguage]
+	);
+
+	function toggleMenu() {
+		menuOpen = !menuOpen;
+	}
+
+	function closeMenu() {
+		menuOpen = false;
+	}
 </script>
 
-<nav class="nav-top">
+<nav class="nav-container">
+	<div class="nav__nav">
+		<span class="nav__nav-brand-container">
+			<a class="nav__nav-brand" href={`${base}/${$currentLanguage}`}>
+				Toonvb.com
+			</a>
+		</span>
 
-</nav>
-<nav class="nav">
-    <div class="nav__inner">
-        <span class="nav__brand"><a href="{base}/">Toonvb.com</a></span>
+		<button
+			class="nav__nav-toggle"
+			type="button"
+			aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+			aria-expanded={menuOpen}
+			onclick={toggleMenu}
+		>
+			<img
+				src={`${base}/menu-${menuOpen ? 'open' : 'closed'}.png`}
+				alt={navContent.imgAlt}
+			/>
+		</button>
 
-        <button
-            class="nav__toggle"
-            type="button"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            onclick={toggleMenu}
-        >
-            <img src={`${base}/menu-` + (menuOpen ? "open" : "closed") + ".png"} alt="" />
-        </button>
+		<ul class={`nav__nav__links ${menuOpen ? 'nav__nav__links-opened' : ''}`}>
+			<li class="nav__nav__links-item-container">
+				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Projects`} onclick={closeMenu}>
+					{navContent.link1}
+				</a>
+			</li>
 
-        <ul class={"nav__links " + (menuOpen ? "open" : "")}>
-            <li><a href="{base}/" onclick={closeMenu}>                  Projects    </a></li>
-            <li><a href="{base}/en-us/Gallery" onclick={closeMenu}>     Gallery     </a></li>
-            <li><a href="{base}/" onclick={closeMenu}>                  Who am i?   </a></li>
-            <li><a href="{base}/" onclick={closeMenu}>                  Contact     </a></li> 
-        </ul>
-    </div>
+			<li class="nav__nav__links-item-container">
+				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Gallery`} onclick={closeMenu}>
+					{navContent.link2}
+				</a>
+			</li>
+
+			<li class="nav__nav__links-item-container">
+				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Aboutme`} onclick={closeMenu}>
+					{navContent.link3}
+				</a>
+			</li>
+
+			<li class="nav__nav__links-item-container">
+				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Contact`} onclick={closeMenu}>
+					{navContent.link4}
+				</a>
+			</li>
+		</ul>
+	</div>
 </nav>
