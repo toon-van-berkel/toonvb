@@ -1,0 +1,7 @@
+export function getLanguageFromStorage(): SupportedLanguage | null {
+	if (!browser) return null;
+
+	const storedLanguage = localStorage.getItem('prefLanguage')?.toLowerCase();
+
+	return isSupportedLanguage(storedLanguage) ? storedLanguage : null;
+}

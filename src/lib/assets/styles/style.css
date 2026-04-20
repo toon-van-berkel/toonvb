@@ -23,12 +23,23 @@
 }
 .nav__top__item {
   display: flex;
+  align-items: center;
   gap: 10px;
+}
+@media only screen and (max-width: 250px) {
+  .nav__top__item-input, .nav__top__item-label {
+    font-size: 0.8em;
+  }
 }
 .nav__top__item-input {
   padding: 1px 5px;
   border-radius: 2px;
   background-color: transparent;
+}
+@media only screen and (max-width: 230px) {
+  .nav__top__item-label {
+    display: none;
+  }
 }
 .nav__nav {
   padding: 10px 20px;
@@ -47,6 +58,8 @@
 }
 .nav__nav-brand-container {
   padding: 5px 10px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 8px;
@@ -58,6 +71,12 @@
   .nav__nav-brand {
     font-size: 1.5em;
     padding: 5px 0;
+  }
+}
+@media only screen and (max-width: 250px) {
+  .nav__nav-brand {
+    font-size: 1em;
+    padding: 0;
   }
 }
 .nav__nav-toggle {
@@ -240,4 +259,44 @@
 }
 .mainBanner-title, .mainBanner-subtitle, .mainBanner-description {
   z-index: 2;
+}
+@media only screen and (max-width: 300px) {
+  .mainBanner-title, .mainBanner-subtitle, .mainBanner-description {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainBanner-description {
+    display: none;
+  }
+}
+
+.plus-jakarta-sans-100 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+:root {
+  --link: #0E385F;
+  --link-hover: #0A2E4F;
+  --link-on-dark: #FDF2D0;
+  --link-on-dark-hover: #FDE68A;
+  --page-bg: #B6A995;
+  --card-bg: #846136;
+  --primary-text: #392E1E;
+  --line: #5E3F20;
+}
+
+body {
+  background-color: var(--page-bg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--primary-text);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }/*# sourceMappingURL=style.css.map */
