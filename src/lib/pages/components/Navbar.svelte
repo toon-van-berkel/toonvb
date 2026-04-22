@@ -47,6 +47,12 @@
 			</li>
 
 			<li class="nav__nav__links-item-container">
+				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Vacations`} onclick={closeMenu}>
+					{navContent.lv}
+				</a>
+			</li>
+
+			<li class="nav__nav__links-item-container">
 				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Gallery`} onclick={closeMenu}>
 					{navContent.link2}
 				</a>

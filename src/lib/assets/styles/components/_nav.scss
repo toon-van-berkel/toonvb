@@ -5,6 +5,7 @@
         margin:     0 auto;
         position:   sticky;
         top:        0;
+        z-index:    5;
     }
     &__top {
         display:            flex;
@@ -90,7 +91,7 @@
             &:hover {
                 cursor: pointer;
             }
-            @media only screen and (max-width: 700px) {
+            @media only screen and (max-width: 800px) {
                 display: block;
             }
         }
@@ -118,8 +119,12 @@
                         border-color: #392E1E;
                     }
                 }
+
+                @media only screen and (max-width: 800px) {
+                    color: #fff5e5;
+                }
             }
-            @media only screen and (max-width: 700px) {
+            @media only screen and (max-width: 800px) {
                 display: none;
             }
             &-opened {
@@ -133,7 +138,7 @@
                 top:                60px;
                 left:               0;
                 border-radius:      8px;
-                background-color: #392E1E50;
+                background-color: #392E1E;
             }
         }
         @media only screen and (max-width: 500px) {

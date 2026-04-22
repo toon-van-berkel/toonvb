@@ -4,6 +4,7 @@
   margin: 0 auto;
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 .nav__top {
   display: flex;
@@ -89,7 +90,7 @@
 .nav__nav-toggle:hover {
   cursor: pointer;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .nav__nav-toggle {
     display: block;
   }
@@ -117,7 +118,12 @@
   cursor: pointer;
   border-color: #392E1E;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+  .nav__nav__links-item {
+    color: #fff5e5;
+  }
+}
+@media only screen and (max-width: 800px) {
   .nav__nav__links {
     display: none;
   }
@@ -133,7 +139,7 @@
   top: 60px;
   left: 0;
   border-radius: 8px;
-  background-color: rgba(57, 46, 30, 0.3137254902);
+  background-color: #392E1E;
 }
 @media only screen and (max-width: 500px) {
   .nav__nav {
