@@ -4,7 +4,8 @@
   margin: 0 auto;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 99999;
+  background-color: #B6A995;
 }
 .nav__top {
   display: flex;
