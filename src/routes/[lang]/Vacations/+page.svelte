@@ -4,7 +4,7 @@
 </script>
 
 <main class="normalize">
-    <section>
+    <section class="section">
         <h1>Vacations</h1>
         <p>Find information on the vacations that Toon van Berkel has gone on.</p>
 
@@ -12,7 +12,7 @@
             <a href={`${base}/${$currentLanguage}/Vacations/Mallorca-2026`}>
                 <article>
                     <img 
-                        src="https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/677075946_122129954931133142_5537192342134779860_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd6889&_nc_ohc=tJbeiw6arNYQ7kNvwGBWAMh&_nc_oc=Adowowff2pquQcVdmjDPlFOiGOTPZbOrv0YMMHZb9vM952Zr458Xbluj-hHp48uf78Q&_nc_zt=23&_nc_ht=scontent-ams2-1.xx&_nc_gid=AFNvSdco2iUNqegj0KF4qg&oh=00_Af2yQqBa67l784AJOQRaeWu3RyAodmut2u7p2U3g-pOPeQ&oe=69F1D25E" 
+                        src="https://scontent.fpmi3-1.fna.fbcdn.net/v/t39.30808-6/674569317_122129847525133142_5151357731418312407_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd6889&_nc_ohc=0vs8u7xkv0gQ7kNvwF_vanu&_nc_oc=AdqwKAJabh1WfEC443Tf8aNyRN5DlbA9PU4xfYzyMVqjAfiYPk-uwwmCBiCX0jkV7m4&_nc_zt=23&_nc_ht=scontent.fpmi3-1.fna&_nc_gid=2kn6X9wwE9-Qtg2qLtD7-w&_nc_ss=7b2a8&oh=00_Af3v5NL3aWtrHE4ClOvVERo4Q7k_HUXSoJZdnjVDhC2kZA&oe=69F2C4AF" 
                         alt="Mallorca 2026 vacation preview"
                     >
 
@@ -34,8 +34,8 @@
 
 <style>
 .card-wrapper {
-    width: min(100%, 390px);
-    max-width: 390px;
+    width: min(100%, 430px);
+    max-width: 430px;
     margin: 32px 0 0;
     display: grid;
     grid-template-columns: 1fr;
@@ -51,7 +51,7 @@
 .card-wrapper article {
     position: relative;
     width: 100%;
-    height: 460px;
+    height: 380px;
     padding: 22px;
     display: flex;
     flex-direction: column;
@@ -69,6 +69,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: right;
     z-index: -4;
     transform: scale(1.02);
     transition: transform 0.5s ease, filter 0.5s ease;
@@ -99,7 +100,7 @@
     height: 225px;
     z-index: -1;
     border-radius: 20px;
-    background: rgba(132, 97, 54, 0.88);
+    background: rgba(132, 97, 54, 0.5);
     border-left: 4px solid var(--link-on-dark);
     box-shadow: 0 14px 34px rgba(57, 46, 30, 0.28);
     backdrop-filter: blur(10px);
@@ -204,6 +205,20 @@
 
     .card-wrapper article h2 {
         font-size: 2rem;
+    }
+}
+@media (max-width: 400px) {
+    .card-wrapper article {
+        height: 270px;
+    }
+    .card-wrapper article::after {
+        height: 135px;
+    }
+    .card-wrapper article h2 {
+        font-size: 1.5em;
+    }
+    .card-wrapper article p {
+        display: none;
     }
 }
 </style>

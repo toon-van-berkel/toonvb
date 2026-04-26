@@ -317,4 +317,19 @@ main.normalize > section {
 }
 main.normalize > section > p {
   margin: 15px 0;
+}
+
+.section {
+  padding: 0 30px;
+}
+
+@media (max-width: 500px) {
+  .section {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 400px) {
+  .section {
+    padding: 0 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
