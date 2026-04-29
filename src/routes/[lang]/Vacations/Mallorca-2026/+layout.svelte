@@ -98,6 +98,7 @@
 	</div>
 
 	<div bind:this={mapContainer} class="map"></div>
+	<slot/>
 </section>
 </main>
 

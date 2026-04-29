@@ -34,21 +34,110 @@ body {
     font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-main.normalize {
+.normalize {
     width: 100%;
 
     & > section {
         max-width: 1100px;
-        margin: 0 auto;
+        margin: 20px auto;
 
         & > p {
-            margin: 15px 0;
+            margin: 10px 0;
         }
     }
 } 
 
+.featured-projects {
+    
+    & > div {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        
+        & > article {
+            width: 30%;
+            border: 1px solid #392E1E;
+            border-radius: 10px;
+            padding: 15px;
+
+            & > h3 {
+                text-align: center;
+            }
+
+            &:hover {
+                transition: ease-in 200ms;
+
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.15);
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.15);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.15);
+            }
+        }
+    }
+}
+
 .section {
     padding: 0 30px;
+}
+
+section ul {
+    margin-left: 20px;
+}
+
+.faq {
+    & > div {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    details {
+        margin-top: 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.12);
+
+        transition: ease-in 200ms;
+
+        &:hover {
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        &[open] {
+            background-color: rgba(255, 255, 255, 0.18);
+        }
+    }
+
+    summary {
+        cursor: pointer;
+        font-weight: 700;
+        list-style: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "+";
+            font-size: 22px;
+            font-weight: 700;
+            margin-left: 15px;
+        }
+    }
+
+    details[open] summary::after {
+        content: "-";
+    }
+
+    p {
+        margin-top: 10px;
+        line-height: 1.6;
+    }
 }
 
 @media (max-width: 500px) {
