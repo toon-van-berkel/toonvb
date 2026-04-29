@@ -315,6 +315,7 @@ body {
 .normalize > section {
   max-width: 1100px;
   margin: 20px auto;
+  padding: 0 30px;
 }
 .normalize > section > p {
   margin: 10px 0;
@@ -322,23 +323,25 @@ body {
 
 .featured-projects > div {
   margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
 }
-.featured-projects > div > article {
-  width: 30%;
-  border: 1px solid #392E1E;
+.featured-projects article {
+  width: 100%;
+  border: 1px solid var(--line);
   border-radius: 10px;
   padding: 15px;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: box-shadow 200ms ease-in, transform 200ms ease-in;
 }
-.featured-projects > div > article > h3 {
+.featured-projects article > h3 {
   text-align: center;
+  margin-bottom: 10px;
 }
-.featured-projects > div > article:hover {
-  transition: ease-in 200ms;
+.featured-projects article:hover {
+  transform: translateY(-3px);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 .section {
@@ -395,12 +398,14 @@ section ul {
 }
 
 @media (max-width: 500px) {
-  .section {
+  .section,
+  .normalize section {
     padding: 0 20px;
   }
 }
 @media (max-width: 400px) {
-  .section {
+  .section,
+  .normalize section {
     padding: 0 15px;
   }
 }/*# sourceMappingURL=style.css.map */
