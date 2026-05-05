@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
-	import { content } from '$lib/typescript/content/pages/gallery';
+	import { content } from '$lib/typescript/content/pages/contact';
 
 	const pageContent = $derived(
 		content[$currentLanguage] ?? content[defaultLanguage]
@@ -25,5 +25,9 @@
 	<section>
 		<h2>{pageContent.heading2}</h2>
 		<p>{pageContent.text2}</p>
+
+		<a href={`mailto:${pageContent.email}`}>
+			{pageContent.email}
+		</a>
 	</section>
 </main>

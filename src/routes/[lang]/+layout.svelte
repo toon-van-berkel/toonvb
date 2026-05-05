@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/pages/components/Navbar.svelte';
     import TopBar from '$lib/pages/components/TopBar.svelte';
+    import Footer from '$lib/pages/components/Footer.svelte';
 	
 	import favicon from '$lib/assets/web/favicon/toonvb-8x8.svg';
 
@@ -17,8 +18,15 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="nav-container">
-	<TopBar></TopBar>
-	<Navbar></Navbar>
+<div class="site-layout">
+	<div class="nav-container">
+		<TopBar></TopBar>
+		<Navbar></Navbar>
+	</div>
+
+	<div class="site-content">
+		{@render children()}
+	</div>
+	
+	<Footer />
 </div>
-{@render children()}

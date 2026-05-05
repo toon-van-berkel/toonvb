@@ -1,6 +1,7 @@
 @use './components/nav';
 @use './components/error';
 @use './components/mainBanner';
+@use './components/footer';
 
 .plus-jakarta-sans-100 {
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -21,8 +22,25 @@
     --line: #5E3F20;
 }
 
+html,
 body {
-    background-color: var(--page-bg);
+	min-height: 100%;
+}
+
+body {
+	min-height: 100dvh;
+	background-color: var(--page-bg);
+}
+
+.site-layout {
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+.site-content {
+	width: 100%;
+	flex: 1;
 }
 
 * {

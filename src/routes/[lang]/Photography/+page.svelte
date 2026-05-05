@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
-	import { content } from '$lib/typescript/content/pages/gallery';
+	import { content } from '$lib/typescript/content/pages/photography';
 
 	const pageContent = $derived(
 		content[$currentLanguage] ?? content[defaultLanguage]

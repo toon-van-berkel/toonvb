@@ -12,7 +12,7 @@
             <a href={`${base}/${$currentLanguage}/Vacations/Mallorca-2026`}>
                 <article>
                     <img 
-                        src="https://scontent.fpmi3-1.fna.fbcdn.net/v/t39.30808-6/674569317_122129847525133142_5151357731418312407_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd6889&_nc_ohc=0vs8u7xkv0gQ7kNvwF_vanu&_nc_oc=AdqwKAJabh1WfEC443Tf8aNyRN5DlbA9PU4xfYzyMVqjAfiYPk-uwwmCBiCX0jkV7m4&_nc_zt=23&_nc_ht=scontent.fpmi3-1.fna&_nc_gid=2kn6X9wwE9-Qtg2qLtD7-w&_nc_ss=7b2a8&oh=00_Af3v5NL3aWtrHE4ClOvVERo4Q7k_HUXSoJZdnjVDhC2kZA&oe=69F2C4AF" 
+                        src="https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/678274076_122129841963133142_2442684504125398360_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=kbm_-b4-AcUQ7kNvwGHn4V5&_nc_oc=AdoeqVLg7mlajgGUP4oYRpN_8CwCO_xAZkffAlaRS9m1n8BrxKMdXPdX7cYyyJDrNwQo_K7KHEJFcBFbPf6bbktq&_nc_zt=23&_nc_ht=scontent-ams2-1.xx&_nc_gid=9-m9zVS45m4-I0obCOuLxQ&_nc_ss=7b2a8&oh=00_Af456dQftQ3QZdePAUFz0wM50ixlc4swU1Qmp7e_wS-LLQ&oe=6A000130" 
                         alt="Mallorca 2026 vacation preview"
                     >
 

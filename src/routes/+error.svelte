@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/pages/components/Navbar.svelte';
     import TopBar from '$lib/pages/components/TopBar.svelte';
+    import Footer from '$lib/pages/components/Footer.svelte';
     import { currentLanguage } from '$lib/typescript/pref/language';
     import { defaultLanguage } from '$lib/typescript/pref/language';
     import { content } from '$lib/typescript/content/pages/error';
@@ -8,8 +9,10 @@
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 
+	import '$lib/assets/styles/style.css';
+	import '$lib/style/style.css';
 
-	const Content = $derived(
+    const Content = $derived(
 		content[$currentLanguage] ?? content[defaultLanguage]
 	);
 </script>
@@ -30,3 +33,5 @@
         </div>
     </section>
 </main>
+
+<Footer />

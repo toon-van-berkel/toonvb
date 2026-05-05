@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
-	import { content } from '$lib/typescript/content/pages/gallery';
+	import { content } from '$lib/typescript/content/pages/projects';
 
 	const pageContent = $derived(
 		content[$currentLanguage] ?? content[defaultLanguage]
@@ -21,9 +21,8 @@
 		<h2>{pageContent.heading1}</h2>
 		<p>{pageContent.text1}</p>
 	</section>
-
-	<section>
+    <section>
 		<h2>{pageContent.heading2}</h2>
 		<p>{pageContent.text2}</p>
-	</section>
+    </section>
 </main>
