@@ -9,6 +9,10 @@
     );
 </script>
 
+<svelte:head>
+	<title>Toonvb.com</title>
+</svelte:head>
+
 <main>
     <MainBanner />
 

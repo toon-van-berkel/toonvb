@@ -44,7 +44,8 @@ export const content: Partial<Record<SupportedLanguage, FooterContent>> = {
             {
                 title: 'Extra Pages',
                 links: [
-                    { label: 'Anime', href: '/Anime' }
+                    { label: 'Anime', href: '/Anime' },
+                    { label: 'News', href: '/News' }
                 ]
             }
         ]
@@ -76,7 +77,8 @@ export const content: Partial<Record<SupportedLanguage, FooterContent>> = {
             {
                 title: 'Extra pagina’s',
                 links: [
-                    { label: 'Anime', href: '/Anime' }
+                    { label: 'Anime', href: '/Anime' },
+                    { label: 'Nieuws', href: '/News' }
                 ]
             }
         ]
