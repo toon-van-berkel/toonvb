@@ -5,8 +5,7 @@
 	
 	import favicon from '$lib/assets/web/favicon/toonvb-8x8.svg';
 
-	import '$lib/style/style.css';
-	import '$lib/assets/styles/style.css';
+	import '$lib/assets/styles/scss/style.css';
     
 	let { children } = $props();
 </script>

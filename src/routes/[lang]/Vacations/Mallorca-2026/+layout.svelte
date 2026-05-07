@@ -2,8 +2,6 @@
 	import { onMount } from 'svelte';
 	import type { LatLng } from 'leaflet';
 
-	import '$lib/assets/styles/map.css';
-
 	import { locations } from '$lib/typescript/mapping/data/locations';
 	import { routes } from '$lib/typescript/mapping/data/routes';
 	import { createMappingKeyHandler } from '$lib/typescript/dev/mapping';

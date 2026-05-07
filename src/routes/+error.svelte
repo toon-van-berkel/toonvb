@@ -8,9 +8,8 @@
 
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
-
-	import '$lib/assets/styles/style.css';
-	import '$lib/style/style.css';
+    
+	import '$lib/assets/styles/scss/style.css';
 
     const Content = $derived(
 		content[$currentLanguage] ?? content[defaultLanguage]

@@ -1,0 +1,39 @@
+// ------------------------------------------------------------
+// Base
+// ------------------------------------------------------------
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--page-bg);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-text);
+    font-family: var(--font-body);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: .15em;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}

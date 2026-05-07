@@ -1,0 +1,28 @@
+@use '../abstracts/mixins' as *;
+
+// ------------------------------------------------------------
+// Featured projects
+// ------------------------------------------------------------
+
+.featured-projects {
+    > div {
+        margin-top: var(--space-2);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: var(--space-4);
+    }
+
+    article {
+        width: 100%;
+        padding: var(--space-3);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background-color: rgb(255 255 255 / 8%);
+        @include hover-lift;
+
+        > h3 {
+            margin-bottom: var(--space-2);
+            text-align: center;
+        }
+    }
+}

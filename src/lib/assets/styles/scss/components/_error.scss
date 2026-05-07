@@ -1,0 +1,85 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// ------------------------------------------------------------
+// Error page
+// ------------------------------------------------------------
+
+.error {
+    max-width: 500px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &-title {
+        font-size: 10em;
+
+        @include mq-max($bp-lg) {
+            font-size: 8em;
+        }
+
+        @include mq-max($bp-sm) {
+            font-size: 6em;
+        }
+    }
+
+    &-subTitle {
+        margin-bottom: var(--space-2);
+
+        @include mq-max($bp-sm) {
+            font-size: 1em;
+        }
+    }
+
+    &-description {
+        @include mq-max($bp-sm) {
+            font-size: .8em;
+        }
+    }
+
+    &__button {
+        width: 40%;
+        padding: var(--space-4);
+        border: 1px solid var(--card-bg);
+        border-radius: var(--radius-sm);
+        color: var(--page-bg);
+        font-weight: bold;
+        text-decoration: none;
+        background-color: var(--card-bg);
+
+        &:hover {
+            color: var(--card-bg);
+            background-color: transparent;
+        }
+
+        &-container {
+            width: 100%;
+            margin-top: var(--space-4);
+            display: flex;
+            justify-content: space-between;
+
+            @include mq-max($bp-lg) {
+                justify-content: space-evenly;
+            }
+
+            @include mq-max($bp-md) {
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+        }
+
+        @include mq-max($bp-md) {
+            width: 100%;
+        }
+
+        @include mq-max(330px) {
+            font-size: 1em;
+        }
+    }
+
+    @include mq-max($bp-lg) {
+        padding: var(--space-4);
+    }
+}

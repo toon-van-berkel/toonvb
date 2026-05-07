@@ -1,0 +1,30 @@
+// ------------------------------------------------------------
+// Mixins
+// ------------------------------------------------------------
+
+@mixin mq-max($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin hover-lift {
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-soft);
+    }
+}

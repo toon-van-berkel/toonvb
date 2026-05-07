@@ -1,0 +1,173 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// ------------------------------------------------------------
+// Navigation
+// ------------------------------------------------------------
+
+.nav {
+    &-container {
+        @include container;
+        position: sticky;
+        top: 0;
+        z-index: 99999;
+        background-color: var(--page-bg);
+        border-radius: var(--radius-md);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--space-4);
+        list-style: none;
+
+        &-container {
+            padding: var(--space-2);
+            border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+            background-color: var(--color-surface-muted);
+
+            @include mq-max($bp-container) {
+                border-radius: 0;
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+
+            &-input,
+            &-label {
+                @include mq-max($bp-xxs) {
+                    font-size: .8em;
+                }
+            }
+
+            &-input {
+                padding: 1px var(--space-1);
+                border-radius: var(--radius-xs);
+                background-color: transparent;
+            }
+
+            &-label {
+                @include mq-max(230px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        padding: var(--space-2) var(--space-4);
+        display: flex;
+        justify-content: space-between;
+
+        &-container {
+            padding: var(--space-4);
+        }
+
+        &-brand {
+            display: block;
+            font-size: 2em;
+            font-weight: 900;
+            color: var(--primary-text);
+            text-decoration: none;
+
+            &-container {
+                padding: var(--space-1) var(--space-2);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                border: 1px solid transparent;
+                border-radius: var(--radius-sm);
+
+                &:hover {
+                    border-color: var(--primary-text);
+                }
+            }
+
+            @include mq-max(330px) {
+                font-size: 1.5em;
+                padding: var(--space-1) 0;
+            }
+
+            @include mq-max($bp-xxs) {
+                font-size: 1em;
+                padding: 0;
+            }
+        }
+
+        &-toggle {
+            padding: 8px;
+            display: none;
+            border: none;
+            border-radius: var(--radius-md);
+            background: transparent;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            @include mq-max($bp-nav) {
+                display: block;
+            }
+        }
+
+        &__links {
+            display: flex;
+            gap: var(--space-4);
+            list-style: none;
+
+            &-item {
+                height: 100%;
+                padding: var(--space-1) var(--space-2);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                color: var(--primary-text);
+                text-decoration: none;
+
+                &-container {
+                    height: 100%;
+                    border: 1px solid transparent;
+                    border-radius: var(--radius-sm);
+
+                    &:hover {
+                        cursor: pointer;
+                        border-color: var(--primary-text);
+                    }
+                }
+
+                @include mq-max($bp-nav) {
+                    color: var(--color-light-text);
+                }
+            }
+
+            @include mq-max($bp-nav) {
+                display: none;
+            }
+
+            &-opened {
+                width: calc(100% - 20px);
+                margin: var(--space-2);
+                padding: var(--space-1) var(--space-2);
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-2);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                border-radius: var(--radius-sm);
+                background-color: var(--primary-text);
+            }
+        }
+
+        @include mq-max($bp-md) {
+            padding: var(--space-2);
+        }
+
+        @include mq-max($bp-sm) {
+            padding: var(--space-1);
+        }
+    }
+}

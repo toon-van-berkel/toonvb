@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// ------------------------------------------------------------
+// Layout
+// ------------------------------------------------------------
+
+.site-layout {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content {
+    width: 100%;
+    flex: 1;
+}
+
+section.normal {
+    width: 100%;
+    margin-top: var(--space-4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include mq-max($bp-wide) {
+        margin-top: var(--space-8);
+    }
+}
+
+.section {
+    @include container;
+    padding-inline: var(--section-padding-x);
+}
+
+.normalize {
+    width: 100%;
+
+    > section {
+        @include container;
+        margin-block: var(--space-4);
+        padding-inline: var(--section-padding-x);
+
+        > p {
+            margin-block: var(--space-2);
+        }
+    }
+}
+
+.line {
+    width: 100%;
+    padding-block: var(--space-4);
+}
+
+.breadcrumbs {
+    margin-bottom: var(--space-4);
+}
+
+hr {
+    @include container;
+    border-color: var(--line);
+    box-shadow: var(--shadow-brown);
+}
+
+section ul {
+    margin-left: var(--space-4);
+}
+
+@include mq-max($bp-md) {
+    .section,
+    .normalize section {
+        padding-inline: var(--section-padding-x-mobile);
+    }
+}
+
+@include mq-max($bp-sm) {
+    .section,
+    .normalize section {
+        padding-inline: var(--section-padding-x-small);
+    }
+}
