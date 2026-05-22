@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+	import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
 	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
 	import { content } from '$lib/typescript/content/pages/news/05-05-2026_1835';
 
@@ -17,6 +19,12 @@
 
 <main class="normalize">
 	<section>
+		<Breadcrumbs
+			items={[
+				{ label: $currentLanguage === 'nl-nl' ? 'Nieuws' : 'News', href: `${base}/${$currentLanguage}/News` },
+				{ label: pageContent.pageTitle }
+			]}
+		/>
 		<h1>{pageContent.pageTitle}</h1>
 		<p>{pageContent.description}</p>
 	</section>

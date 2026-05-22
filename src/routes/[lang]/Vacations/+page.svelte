@@ -1,10 +1,12 @@
 <script>
     import { base } from "$app/paths";
+    import Breadcrumbs from "$lib/pages/components/Breadcrumbs.svelte";
     import { currentLanguage } from "$lib/typescript/pref/language";
 </script>
 
 <main class="normalize">
     <section class="section">
+        <Breadcrumbs items={[{ label: $currentLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations' }]} />
         <h1>Vacations</h1>
         <p>Find information on the vacations that Toon van Berkel has gone on.</p>
 
@@ -12,8 +14,8 @@
             <a href={`${base}/${$currentLanguage}/Vacations/Mallorca-2026`}>
                 <article>
                     <img 
-                        src="https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/678274076_122129841963133142_2442684504125398360_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=kbm_-b4-AcUQ7kNvwGHn4V5&_nc_oc=AdoeqVLg7mlajgGUP4oYRpN_8CwCO_xAZkffAlaRS9m1n8BrxKMdXPdX7cYyyJDrNwQo_K7KHEJFcBFbPf6bbktq&_nc_zt=23&_nc_ht=scontent-ams2-1.xx&_nc_gid=9-m9zVS45m4-I0obCOuLxQ&_nc_ss=7b2a8&oh=00_Af456dQftQ3QZdePAUFz0wM50ixlc4swU1Qmp7e_wS-LLQ&oe=6A000130" 
-                        alt="Mallorca 2026 vacation preview"
+                        src="https://31nl.github.io/a/1.jpg" 
+                        alt="Toon van Berkel on vacation in Mallorca, a sea in the background and standing on natural rocks."
                     >
 
                     <span class="card-tag">Vacation</span>

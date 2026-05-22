@@ -1,16 +1,25 @@
 <script lang="ts">
-    const animes = [
-        {
-            title: 'Naruto',
-            state: 'finished'
-        },
-        {
-            title: 'Boruto',
-            state: 'watching'
-        }
-    ];
+    import { base } from '$app/paths';
+    import { page } from '$app/state';
+    import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
+    import { content } from '$lib/typescript/content/pages/anime';
+    import {
+        currentLanguage,
+        defaultLanguage,
+        isSupportedLanguage
+    } from '$lib/typescript/pref/language';
 
     let filter = $state('');
+
+    const activeLanguage = $derived(
+        isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+    );
+
+    const pageContent = $derived(content[activeLanguage] ?? content[defaultLanguage]);
+
+    const filteredAnimes = $derived(
+        pageContent.items.filter((anime) => filter === '' || anime.state === filter)
+    );
 
     function handleFilterClick(event: MouseEvent) {
         const button = event.currentTarget as HTMLButtonElement;
@@ -18,20 +27,38 @@
     }
 </script>
 
+<svelte:head>
+    <title>{pageContent.pageTitle} | Toonvb.com</title>
+    <meta name="description" content={pageContent.intro} />
+</svelte:head>
+
 <main class="normalize">
-    <section class="section">
-        <h1>Anime</h1>
+    <section class="anime-page">
+        <Breadcrumbs items={[{ label: pageContent.breadcrumbs.anime }]} />
 
-        <button data-filter="watching" onclick={handleFilterClick}>Watching</button>
-        <button data-filter="finished" onclick={handleFilterClick}>Finished</button>
-        <button data-filter="" onclick={handleFilterClick}>All</button>
+        <div class="anime-page__header">
+            <h1>{pageContent.pageTitle}</h1>
+            <p>{pageContent.intro}</p>
+        </div>
 
-        <ul>
-            {#each animes as anime}
-                {#if filter === '' || anime.state === filter}
-                        <li>{anime.title}</li>
-                {/if}
-            {/each}
-        </ul>
+        <div class="anime-page__filters" aria-label={pageContent.galleryLabel}>
+            <button class:active={filter === ''} data-filter="" type="button" onclick={handleFilterClick}>{pageContent.filters.all}</button>
+            <button class:active={filter === 'watching'} data-filter="watching" type="button" onclick={handleFilterClick}>{pageContent.filters.watching}</button>
+            <button class:active={filter === 'finished'} data-filter="finished" type="button" onclick={handleFilterClick}>{pageContent.filters.finished}</button>
+        </div>
+
+        <div class="anime-page__layout">
+            <div class="anime-page__grid" aria-label={pageContent.galleryLabel}>
+                {#each filteredAnimes as anime}
+                    <a class="anime-card" href={`${base}/${activeLanguage}/Anime/${anime.slug}`}>
+                        <img src={`${base}${anime.image}`} alt={anime.imageAlt} loading="lazy" />
+                        <span class="anime-card__content">
+                            <strong>{anime.title}</strong>
+                            <small>{pageContent.statusLabels[anime.state]}</small>
+                        </span>
+                    </a>
+                {/each}
+            </div>
+        </div>
     </section>
 </main>

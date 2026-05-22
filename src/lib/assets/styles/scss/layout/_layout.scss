@@ -54,6 +54,32 @@ section.normal {
 
 .breadcrumbs {
     margin-bottom: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    align-items: center;
+    color: var(--primary-text);
+
+    a {
+        color: var(--link);
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        &:focus-visible {
+            outline: 3px solid rgb(14 56 95 / 32%);
+            outline-offset: 3px;
+        }
+    }
+
+    span {
+        color: var(--primary-text);
+        font-weight: 700;
+    }
 }
 
 hr {

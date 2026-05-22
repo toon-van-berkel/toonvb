@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
     import { content } from "$lib/typescript/content/components/aboutMe";
 	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
     
@@ -9,6 +10,7 @@
 
 <main class="normalize">
 	<section>
+		<Breadcrumbs items={[{ label: AboutmeContent.title }]} />
 		<h1>	{AboutmeContent.title}</h1>
 		<p>		{AboutmeContent.text1}</p>
 		<p>		{AboutmeContent.text2}</p>

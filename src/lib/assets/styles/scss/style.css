@@ -1,4 +1,5 @@
 @import 'leaflet/dist/leaflet.css';
+@import 'leaflet/dist/leaflet.css';
 :root {
   --color-page-bg: #B6A995;
   --color-surface: #846136;
@@ -136,6 +137,28 @@ section.normal {
 
 .breadcrumbs {
   margin-bottom: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  color: var(--primary-text);
+}
+.breadcrumbs a {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+.breadcrumbs a:focus-visible {
+  outline: 3px solid rgba(14, 56, 95, 0.32);
+  outline-offset: 3px;
+}
+.breadcrumbs span {
+  color: var(--primary-text);
+  font-weight: 700;
 }
 
 hr {
@@ -566,6 +589,156 @@ section ul {
   width: 100%;
 }
 
+.anime-page {
+  padding-block: var(--space-8);
+}
+.anime-page__header {
+  max-width: 760px;
+}
+.anime-page__header p {
+  margin-top: var(--space-2);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.anime-page__filters {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.anime-page__filters button {
+  min-height: 42px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--primary-text);
+  font: inherit;
+  cursor: pointer;
+  outline: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+.anime-page__filters button:hover, .anime-page__filters button.active {
+  background-color: var(--card-bg);
+  color: var(--color-light-text);
+}
+.anime-page__filters button:hover {
+  transform: translateY(-1px);
+}
+.anime-page__filters button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(14, 56, 95, 0.32);
+}
+.anime-page__layout {
+  margin-top: var(--space-6);
+}
+.anime-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.anime-card {
+  min-height: 300px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, rgba(14, 56, 95, 0.15), rgba(132, 97, 54, 0.22)), var(--page-bg);
+  color: var(--primary-text);
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.anime-card:hover, .anime-card.active {
+  border-color: var(--card-bg);
+  box-shadow: var(--shadow-brown);
+  transform: translateY(-2px);
+}
+.anime-card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(14, 56, 95, 0.32), var(--shadow-brown);
+}
+.anime-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: var(--card-bg);
+}
+.anime-card__content {
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-1);
+}
+.anime-card__content strong {
+  font-size: 1.3rem;
+}
+.anime-card__content small {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px var(--space-2);
+  border-radius: var(--radius-xs);
+  background-color: rgba(255, 245, 229, 0.65);
+  color: var(--primary-text);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.anime-profile {
+  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
+  gap: var(--space-6);
+  background-color: rgba(255, 245, 229, 0.38);
+}
+.anime-profile > img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  background-color: var(--card-bg);
+}
+.anime-profile__content {
+  align-self: center;
+}
+.anime-profile__content h1 {
+  margin-top: var(--space-4);
+}
+.anime-profile__content h2 {
+  margin-top: var(--space-5);
+}
+.anime-profile__content p {
+  margin-top: var(--space-2);
+  line-height: 1.75;
+}
+.anime-profile__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.anime-profile__meta span {
+  padding: 4px var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xs);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .anime-profile {
+    grid-template-columns: 1fr;
+  }
+}
 .mainBanner {
   width: 100%;
   max-width: 700px;
@@ -757,4 +930,83 @@ section ul {
 .faq p {
   margin-top: var(--space-2);
   line-height: 1.6;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.map-page-content {
+  height: 700px;
+  margin-top: 15px;
+  display: flex;
+  border-radius: 10px;
+}
+.map-page-content > ul {
+  width: 20%;
+  max-height: 700px;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px 0 0 10px;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--color-surface-muted);
+}
+.map-page-content > ul > li {
+  width: 100%;
+  height: 50px;
+}
+.map-page-content > ul > li > a {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--color-page-bg);
+}
+.map-page-content > ul > li > a:hover {
+  background-color: var(--color-surface);
+  color: var(--color-light-text);
+  cursor: pointer;
+  animation: slidein 0.4s ease-in-out;
+  border-radius: 10px 0 0 10px;
+}
+.map-page-content > div {
+  width: 80%;
+  height: 100%;
+  background-color: var(--color-surface-muted);
+  border-radius: 0 10px 10px 0;
+}
+.map-page-content > div .map {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  border-radius: 0 10px 10px 0 !important;
+  box-shadow: none !important;
+}
+.map-page-content > div > .bordor-left {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  overflow-y: scroll;
+  border-left: 1px solid var(--color-surface);
+}
+.map-page-content > div > .bordor-left > .map {
+  margin-top: 15px;
+  border-radius: 0 !important;
 }/*# sourceMappingURL=style.css.map */
