@@ -1,5 +1,12 @@
 <script lang="ts">
-	import { canonicalUrl, defaultOgImage, languageName, siteName, type SeoData } from './site';
+	import {
+		canonicalUrl,
+		defaultOgImage,
+		languageName,
+		localizedPath,
+		siteName,
+		type SeoData
+	} from './site';
 
 	let {
 		title,
@@ -15,6 +22,8 @@
 	const canonical = $derived(canonicalUrl(path));
 	const locale = $derived(languageName(lang));
 	const jsonLdText = $derived(jsonLd ? JSON.stringify(jsonLd) : '');
+	const englishUrl = $derived(canonicalUrl(localizedPath(path, 'en-gb')));
+	const dutchUrl = $derived(canonicalUrl(localizedPath(path, 'nl-nl')));
 </script>
 
 <svelte:head>
@@ -22,6 +31,9 @@
 	<meta name="description" content={description} />
 	<meta name="robots" content={robots} />
 	<link rel="canonical" href={canonical} />
+	<link rel="alternate" hreflang="en-GB" href={englishUrl} />
+	<link rel="alternate" hreflang="nl-NL" href={dutchUrl} />
+	<link rel="alternate" hreflang="x-default" href={englishUrl} />
 
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />

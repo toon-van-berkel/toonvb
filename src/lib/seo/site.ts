@@ -22,6 +22,18 @@ export function canonicalUrl(path: string) {
 	return `${siteUrl}${cleanPath}`;
 }
 
+export function localizedPath(path: string, lang: SupportedLanguage) {
+	const cleanPath = path.startsWith('/') ? path : `/${path}`;
+	const parts = cleanPath.split('/').filter(Boolean);
+
+	if (parts[0] === 'en-gb' || parts[0] === 'nl-nl') {
+		parts[0] = lang;
+		return `/${parts.join('/')}`;
+	}
+
+	return `/${lang}${cleanPath === '/' ? '' : cleanPath}`;
+}
+
 export function languageName(lang: SupportedLanguage) {
 	return lang === 'nl-nl' ? 'nl_NL' : 'en_GB';
 }

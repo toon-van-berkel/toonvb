@@ -5,6 +5,7 @@
 - Added a reusable Svelte 5 SEO head component for page titles, descriptions, canonical URLs, Open Graph tags, Twitter card tags, robots directives and JSON-LD.
 - Added shared SEO helpers for canonical URL generation, Person schema, WebSite schema and BreadcrumbList schema.
 - Added unique metadata for the homepage, About, Projects, Contact, Gallery, Vacations, Mallorca 2026, Travel, Photography, Music, Games, Anime, Anime detail, News and News article pages.
+- Added `hreflang` alternates for English and Dutch language versions.
 - Added structured data where it matches visible content: Person, WebSite, FAQPage, BreadcrumbList, Article and Review.
 - Added a prerendered `/sitemap.xml` route with all important English and Dutch public URLs.
 - Updated `robots.txt` to allow crawling and point to `https://toonvb.com/sitemap.xml`.
@@ -42,7 +43,9 @@
 
 ## Verification
 
+- Implementation was checked against Google Search Central guidance for helpful, reliable, people-first content, SEO fundamentals, AI search features and Core Web Vitals.
 - View page source and confirm each important URL has one `<title>`, one meta description and one canonical URL.
+- Confirm translated pages include `rel="alternate"` links for `en-GB`, `nl-NL` and `x-default`.
 - Visit `/sitemap.xml` and confirm it lists the public language URLs.
 - Visit `/robots.txt` and confirm it allows crawling and references the sitemap.
 - Test representative URLs in Google Rich Results Test and Schema Markup Validator.
@@ -55,3 +58,10 @@
 - Decide whether consent mode or a cookie banner is required for analytics in the EEA.
 - Decide whether canonical URLs should stay language-prefixed or whether the root URL should become the public canonical homepage.
 - Decide whether uppercase route names such as `/Projects` and `/Aboutme` should be kept for URL stability or migrated to lowercase with redirects.
+
+## Reference Docs
+
+- Google Search Central: Creating helpful, reliable, people-first content: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+- Google Search Central: SEO Starter Guide: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+- Google Search Central: AI features and your website: https://developers.google.com/search/docs/appearance/ai-features
+- Google Search Central: Core Web Vitals and Google Search: https://developers.google.com/search/docs/appearance/core-web-vitals
