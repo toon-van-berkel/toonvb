@@ -1,17 +1,62 @@
 <script lang="ts">
+	import { page } from '$app/state';
     import MainBanner from '$lib/pages/components/MainBanner.svelte';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { breadcrumbSchema, personSchema, websiteSchema } from '$lib/seo/site';
 
     import { content } from '$lib/typescript/content/pages/home';
-    import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
+    import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
+
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
 
     const homeContent = $derived(
-        content[$currentLanguage] ?? content[defaultLanguage]
+        content[activeLanguage] ?? content[defaultLanguage]
     );
+
+	const seoTitle = $derived(
+		activeLanguage === 'nl-nl'
+			? 'Toon van Berkel | Creative Developer & Digitaal Portfolio'
+			: 'Toon van Berkel | Creative Developer & Digital Portfolio'
+	);
+	const seoDescription = $derived(
+		activeLanguage === 'nl-nl'
+			? 'Bekijk het digitale portfolio van Toon van Berkel, een creative software developer gericht op SvelteKit, webdevelopment, front-end design, automation en praktische digitale oplossingen.'
+			: 'Explore the digital portfolio of Toon van Berkel, a creative software developer focused on SvelteKit, web development, front-end design, automation and practical digital solutions.'
+	);
+	const seoPath = $derived(`/${activeLanguage}`);
+	const faqSchema = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: homeContent.faq.items.map((item) => ({
+			'@type': 'Question',
+			name: item.question,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: item.answer
+			}
+		}))
+	});
+	const jsonLd = $derived([
+		personSchema(),
+		websiteSchema(),
+		breadcrumbSchema([{ name: 'Home', path: seoPath }]),
+		faqSchema
+	]);
 </script>
 
-<svelte:head>
-	<title>Toonvb.com</title>
-</svelte:head>
+<SeoHead
+	title={seoTitle}
+	description={seoDescription}
+	path={seoPath}
+	lang={activeLanguage}
+	jsonLd={jsonLd}
+/>
 
 <main>
     <MainBanner />

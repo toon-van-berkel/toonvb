@@ -1,13 +1,23 @@
 <script lang="ts">
-    import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
+	import { base } from '$app/paths';
+	import { page } from '$app/state';
+    import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
     import { content } from '$lib/typescript/content/components/footer';
 
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
+
     const footerContent = $derived(
-        content[$currentLanguage] ?? content[defaultLanguage] ?? content['en-gb']
+        content[activeLanguage] ?? content[defaultLanguage] ?? content['en-gb']
     );
 
     function buildLink(link: string) {
-        const lang = $currentLanguage ?? defaultLanguage;
+        const lang = activeLanguage ?? defaultLanguage;
 
         // External links should stay untouched
         if (link.startsWith('http')) {
@@ -16,11 +26,11 @@
 
         // Home page: "/" becomes "/en-gb"
         if (link === '/') {
-            return `/${lang}`;
+            return `${base}/${lang}`;
         }
 
         // Other pages: "/about" becomes "/en-gb/about"
-        return `/${lang}${link}`;
+        return `${base}/${lang}${link}`;
     }
 
     const year = new Date().getFullYear();

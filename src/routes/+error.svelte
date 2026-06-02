@@ -5,16 +5,23 @@
     import { currentLanguage } from '$lib/typescript/pref/language';
     import { defaultLanguage } from '$lib/typescript/pref/language';
     import { content } from '$lib/typescript/content/pages/error';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
 
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
     
 	import '$lib/assets/styles/scss/style.css';
 
-    const Content = $derived(
-		content[$currentLanguage] ?? content[defaultLanguage]
-	);
+	const activeLanguage = $derived($currentLanguage ?? defaultLanguage);
+	const Content = $derived(content[activeLanguage] ?? content[defaultLanguage]);
 </script>
+
+<SeoHead
+	title="Page not found | Toonvb.com"
+	description="This page could not be found on Toonvb.com. Use the navigation to return to Toon van Berkel's portfolio."
+	path={page.url.pathname}
+	robots="noindex, follow"
+/>
 
 <div class="nav-container">
 	<TopBar></TopBar>
@@ -27,7 +34,7 @@
         <h2 class="error-subTitle">{Content.title}</h2>
         <p class="error-description">{Content.description1}"{page.url.pathname}"{Content.description2}<a href="mailto:toonvanberkel203@proton.me">toonvanberkel203@proton.me</a>.</p>
         <div class="error__button-container">
-            <a class="error__button" href={`${base}/${$currentLanguage}`}>{Content.link1}</a>
+            <a class="error__button" href={`${base}/${activeLanguage}`}>{Content.link1}</a>
             <a class="error__button" href="mailto:toonvanberkel203@proton.me">{Content.link2}</a>
         </div>
     </section>

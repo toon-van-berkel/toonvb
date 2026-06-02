@@ -1,21 +1,57 @@
-<script>
+<script lang="ts">
     import { base } from "$app/paths";
+    import { page } from "$app/state";
     import Breadcrumbs from "$lib/pages/components/Breadcrumbs.svelte";
-    import { currentLanguage } from "$lib/typescript/pref/language";
+	import SeoHead from "$lib/seo/SeoHead.svelte";
+	import { breadcrumbSchema } from "$lib/seo/site";
+    import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from "$lib/typescript/pref/language";
+
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
+	const pageTitle = $derived(activeLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations');
+	const heading = $derived(activeLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations');
+	const intro = $derived(
+		activeLanguage === 'nl-nl'
+			? 'Bekijk reisnotities, foto’s en interactieve kaarten van vakanties van Toon van Berkel.'
+			: 'Explore travel notes, photos and interactive maps from vacations by Toon van Berkel.'
+	);
+	const seoPath = $derived(`/${activeLanguage}/Vacations`);
+	const jsonLd = $derived(
+		breadcrumbSchema([
+			{ name: 'Home', path: `/${activeLanguage}` },
+			{ name: pageTitle, path: seoPath }
+		])
+	);
 </script>
+
+<SeoHead
+	title={`${pageTitle} by Toon van Berkel | Travel Maps & Photo Notes`}
+	description={intro}
+	path={seoPath}
+	lang={activeLanguage}
+	jsonLd={jsonLd}
+/>
 
 <main class="normalize">
     <section class="section">
-        <Breadcrumbs items={[{ label: $currentLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations' }]} />
-        <h1>Vacations</h1>
-        <p>Find information on the vacations that Toon van Berkel has gone on.</p>
+        <Breadcrumbs items={[{ label: pageTitle }]} />
+        <h1>{heading}</h1>
+        <p>{intro}</p>
 
         <div class="card-wrapper">
-            <a href={`${base}/${$currentLanguage}/Vacations/Mallorca-2026`}>
+            <a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026`}>
                 <article>
                     <img 
                         src="https://31nl.github.io/a/1.jpg" 
                         alt="Toon van Berkel on vacation in Mallorca, a sea in the background and standing on natural rocks."
+						loading="lazy"
+						width="430"
+						height="380"
                     >
 
                     <span class="card-tag">Vacation</span>

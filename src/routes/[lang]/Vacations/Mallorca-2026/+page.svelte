@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	import type { LatLng } from 'leaflet';
 
@@ -8,9 +9,18 @@
 	import { createMappingKeyHandler } from '$lib/typescript/dev/mapping';
     import { base } from '$app/paths';
     import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
-    import { currentLanguage } from '$lib/typescript/pref/language';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { breadcrumbSchema } from '$lib/seo/site';
+    import {
+		currentLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
 
-    let selectedDate = $derived(page.url.searchParams.get('date'));
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
+
+    let selectedDate = $derived(browser ? page.url.searchParams.get('date') : null);
 	
 	let mapContainer = $state<HTMLDivElement | undefined>();
 
@@ -104,13 +114,34 @@
 			}
 		};
 	});
+
+	const seoPath = $derived(`/${activeLanguage}/Vacations/Mallorca-2026`);
+	const pageTitle = $derived(
+		activeLanguage === 'nl-nl'
+			? 'Mallorca 2026 Travel Map van Toon van Berkel'
+			: 'Mallorca 2026 Travel Map by Toon van Berkel'
+	);
+	const pageDescription = $derived(
+		activeLanguage === 'nl-nl'
+			? 'Bekijk de interactieve Mallorca 2026 kaart met routes, bezochte plekken, foto’s en reisnotities van Toon van Berkel.'
+			: 'Explore the interactive Mallorca 2026 map with routes, visited places, photos and travel notes from Toon van Berkel.'
+	);
+	const jsonLd = $derived(
+		breadcrumbSchema([
+			{ name: 'Home', path: `/${activeLanguage}` },
+			{ name: activeLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations', path: `/${activeLanguage}/Vacations` },
+			{ name: 'Mallorca 2026', path: seoPath }
+		])
+	);
 </script>
+
+<SeoHead title={pageTitle} description={pageDescription} path={seoPath} lang={activeLanguage} jsonLd={jsonLd} />
 
 <main class="normalize">
 <section class="map-page section">
     <Breadcrumbs
         items={[
-            { label: $currentLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations', href: `${base}/${$currentLanguage}/Vacations` },
+            { label: activeLanguage === 'nl-nl' ? 'Vakanties' : 'Vacations', href: `${base}/${activeLanguage}/Vacations` },
             { label: 'Mallorca 2026' }
         ]}
     />
@@ -122,20 +153,20 @@
 
 	<div class="map-page-content">
         <ul>
-            <li><a href="{base}/Vacations/Mallorca-2026">All</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=19-04-2026">19-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=20-04-2026">20-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=21-04-2026">21-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=22-04-2026">22-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=23-04-2026">23-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=24-04-2026">24-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=25-04-2026">25-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=26-04-2026">26-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=27-04-2026">27-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=28-04-2026">28-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=29-04-2026">29-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=30-04-2026">30-04-2026</a></li>
-            <li><a href="{base}/Vacations/Mallorca-2026?date=01-04-2026">01-05-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026`}>All</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=19-04-2026`}>19-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=20-04-2026`}>20-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=21-04-2026`}>21-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=22-04-2026`}>22-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=23-04-2026`}>23-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=24-04-2026`}>24-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=25-04-2026`}>25-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=26-04-2026`}>26-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=27-04-2026`}>27-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=28-04-2026`}>28-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=29-04-2026`}>29-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=30-04-2026`}>30-04-2026</a></li>
+            <li><a href={`${base}/${activeLanguage}/Vacations/Mallorca-2026?date=01-05-2026`}>01-05-2026</a></li>
         </ul>
 		<div>
 			{#if selectedDate}

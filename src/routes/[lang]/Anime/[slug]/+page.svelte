@@ -2,6 +2,8 @@
     import { base } from '$app/paths';
     import { page } from '$app/state';
     import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { breadcrumbSchema, canonicalUrl } from '$lib/seo/site';
     import { content } from '$lib/typescript/content/pages/anime';
     import {
         currentLanguage,
@@ -17,12 +19,46 @@
     const anime = $derived(
         pageContent.items.find((item) => item.slug === page.params.slug) ?? pageContent.items[0]
     );
+
+	function imageSrc(src: string) {
+		return src.startsWith('http') ? src : `${base}${src}`;
+	}
+
+	const seoPath = $derived(`/${activeLanguage}/Anime/${anime.slug}`);
+	const seoTitle = $derived(`${anime.title} | ${pageContent.pageTitle} by Toon van Berkel`);
+	const jsonLd = $derived([
+		breadcrumbSchema([
+			{ name: 'Home', path: `/${activeLanguage}` },
+			{ name: pageContent.pageTitle, path: `/${activeLanguage}/Anime` },
+			{ name: anime.title, path: seoPath }
+		]),
+		{
+			'@context': 'https://schema.org',
+			'@type': 'Review',
+			name: seoTitle,
+			url: canonicalUrl(seoPath),
+			itemReviewed: {
+				'@type': 'CreativeWorkSeries',
+				name: anime.title
+			},
+			author: {
+				'@type': 'Person',
+				name: 'Toon van Berkel'
+			},
+			reviewBody: anime.thought
+		}
+	]);
 </script>
 
-<svelte:head>
-    <title>{anime.title} | {pageContent.pageTitle} | Toonvb.com</title>
-    <meta name="description" content={anime.thought} />
-</svelte:head>
+<SeoHead
+	title={seoTitle}
+	description={anime.thought}
+	path={seoPath}
+	lang={activeLanguage}
+	type="article"
+	image={anime.image}
+	jsonLd={jsonLd}
+/>
 
 <main class="normalize">
     <section class="anime-page anime-page--detail">
@@ -34,7 +70,7 @@
         />
 
         <article class="anime-profile">
-            <img src={`${base}${anime.image}`} alt={anime.imageAlt} />
+            <img src={imageSrc(anime.image)} alt={anime.imageAlt} />
 
             <div class="anime-profile__content">
                 <div class="anime-profile__meta">

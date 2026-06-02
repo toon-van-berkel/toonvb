@@ -1,27 +1,61 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { page } from '$app/state';
 	import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
-	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { breadcrumbSchema, canonicalUrl } from '$lib/seo/site';
+	import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
 	import { content } from '$lib/typescript/content/pages/news/05-05-2026_1835';
 
-	const pageContent = $derived(
-		content[$currentLanguage] ?? content[defaultLanguage]
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
 	);
+
+	const pageContent = $derived(
+		content[activeLanguage] ?? content[defaultLanguage]
+	);
+	const seoPath = $derived(`/${activeLanguage}/News/05-05-2026_1835`);
+	const jsonLd = $derived([
+		breadcrumbSchema([
+			{ name: 'Home', path: `/${activeLanguage}` },
+			{ name: activeLanguage === 'nl-nl' ? 'Nieuws' : 'News', path: `/${activeLanguage}/News` },
+			{ name: pageContent.pageTitle, path: seoPath }
+		]),
+		{
+			'@context': 'https://schema.org',
+			'@type': 'Article',
+			headline: pageContent.pageTitle,
+			description: pageContent.description,
+			url: canonicalUrl(seoPath),
+			datePublished: '2026-05-05T18:35:00+02:00',
+			dateModified: '2026-06-02T00:00:00+02:00',
+			author: {
+				'@type': 'Person',
+				name: 'Toon van Berkel',
+				url: 'https://toonvb.com/'
+			}
+		}
+	]);
 </script>
 
-<svelte:head>
-	<title>{pageContent.pageTitle} | Toonvb.com</title>
-	<meta
-		name="description"
-		content={pageContent.description}
-	/>
-</svelte:head>
+<SeoHead
+	title={`${pageContent.pageTitle} | Toon van Berkel`}
+	description={pageContent.description}
+	path={seoPath}
+	lang={activeLanguage}
+	type="article"
+	jsonLd={jsonLd}
+/>
 
 <main class="normalize">
 	<section>
 		<Breadcrumbs
 			items={[
-				{ label: $currentLanguage === 'nl-nl' ? 'Nieuws' : 'News', href: `${base}/${$currentLanguage}/News` },
+				{ label: activeLanguage === 'nl-nl' ? 'Nieuws' : 'News', href: `${base}/${activeLanguage}/News` },
 				{ label: pageContent.pageTitle }
 			]}
 		/>
@@ -43,7 +77,7 @@
 		<h2>{pageContent.heading3}</h2>
 		<p>{pageContent.text3}</p>
 
-		<a href={pageContent.linkUrl} target="_blank" rel="noreferrer">
+		<a href={pageContent.linkUrl} target="_blank" rel="noopener noreferrer">
 			{pageContent.linkText}
 		</a>
 	</section>

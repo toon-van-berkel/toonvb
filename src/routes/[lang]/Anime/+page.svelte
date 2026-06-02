@@ -2,6 +2,8 @@
     import { base } from '$app/paths';
     import { page } from '$app/state';
     import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { breadcrumbSchema } from '$lib/seo/site';
     import { content } from '$lib/typescript/content/pages/anime';
     import {
         currentLanguage,
@@ -25,12 +27,26 @@
         const button = event.currentTarget as HTMLButtonElement;
         filter = button.dataset.filter ?? '';
     }
+
+	function imageSrc(src: string) {
+		return src.startsWith('http') ? src : `${base}${src}`;
+	}
+
+	const seoPath = $derived(`/${activeLanguage}/Anime`);
+	const seoTitle = $derived(
+		activeLanguage === 'nl-nl'
+			? 'Anime lijst van Toon van Berkel | Persoonlijke kijklijst'
+			: 'Anime List by Toon van Berkel | Personal Watchlist'
+	);
+	const jsonLd = $derived(
+		breadcrumbSchema([
+			{ name: 'Home', path: `/${activeLanguage}` },
+			{ name: pageContent.pageTitle, path: seoPath }
+		])
+	);
 </script>
 
-<svelte:head>
-    <title>{pageContent.pageTitle} | Toonvb.com</title>
-    <meta name="description" content={pageContent.intro} />
-</svelte:head>
+<SeoHead title={seoTitle} description={pageContent.intro} path={seoPath} lang={activeLanguage} jsonLd={jsonLd} />
 
 <main class="normalize">
     <section class="anime-page">
@@ -51,7 +67,7 @@
             <div class="anime-page__grid" aria-label={pageContent.galleryLabel}>
                 {#each filteredAnimes as anime}
                     <a class="anime-card" href={`${base}/${activeLanguage}/Anime/${anime.slug}`}>
-                        <img src={`${base}${anime.image}`} alt={anime.imageAlt} loading="lazy" />
+                        <img src={imageSrc(anime.image)} alt={anime.imageAlt} loading="lazy" />
                         <span class="anime-card__content">
                             <strong>{anime.title}</strong>
                             <small>{pageContent.statusLabels[anime.state]}</small>

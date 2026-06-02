@@ -1,9 +1,18 @@
 <script lang="ts">
+	import { page } from '$app/state';
     import { content } from "$lib/typescript/content/components/mainBanner";
-	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
-    
+	import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
+
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
+
 	const mainbannerContent = $derived(
-		content[$currentLanguage] ?? content[defaultLanguage]
+		content[activeLanguage] ?? content[defaultLanguage]
 	);
 </script>
 

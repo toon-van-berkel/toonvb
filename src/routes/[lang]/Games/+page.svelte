@@ -1,20 +1,34 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import Breadcrumbs from '$lib/pages/components/Breadcrumbs.svelte';
-	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
+	import SeoHead from '$lib/seo/SeoHead.svelte';
+	import { breadcrumbSchema } from '$lib/seo/site';
+	import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
 	import { content } from '$lib/typescript/content/pages/games';
 
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
+
 	const pageContent = $derived(
-		content[$currentLanguage] ?? content[defaultLanguage]
+		content[activeLanguage] ?? content[defaultLanguage]
+	);
+	const seoTitle = $derived(`${pageContent.pageTitle} by Toon van Berkel | Game Interests`);
+	const seoDescription = $derived(pageContent.text1);
+	const seoPath = $derived(`/${activeLanguage}/Games`);
+	const jsonLd = $derived(
+		breadcrumbSchema([
+			{ name: 'Home', path: `/${activeLanguage}` },
+			{ name: pageContent.pageTitle, path: seoPath }
+		])
 	);
 </script>
 
-<svelte:head>
-	<title>{pageContent.pageTitle} | Toonvb.com</title>
-	<meta
-		name="description"
-		content={pageContent.text1}
-	/>
-</svelte:head>
+<SeoHead title={seoTitle} description={seoDescription} path={seoPath} lang={activeLanguage} jsonLd={jsonLd} />
 
 <main class="normalize">
 	<section>

@@ -1,12 +1,21 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { currentLanguage, defaultLanguage } from '$lib/typescript/pref/language';
+	import { page } from '$app/state';
+	import {
+		currentLanguage,
+		defaultLanguage,
+		isSupportedLanguage
+	} from '$lib/typescript/pref/language';
 	import { content } from '$lib/typescript/content/components/navbar';
 
 	let menuOpen = $state(false);
 
+	const activeLanguage = $derived(
+		isSupportedLanguage(page.params.lang) ? page.params.lang : $currentLanguage
+	);
+
 	const navContent = $derived(
-		content[$currentLanguage] ?? content[defaultLanguage]
+		content[activeLanguage] ?? content[defaultLanguage]
 	);
 
 	function toggleMenu() {
@@ -21,7 +30,7 @@
 <nav class="nav-container">
 	<div class="nav__nav">
 		<span class="nav__nav-brand-container">
-			<a class="nav__nav-brand" href={`${base}/${$currentLanguage}`}>
+			<a class="nav__nav-brand" href={`${base}/${activeLanguage}`}>
 				Toonvb.com
 			</a>
 		</span>
@@ -35,37 +44,38 @@
 		>
 			<img
 				src={`${base}/menu-${menuOpen ? 'open' : 'closed'}.png`}
-				alt={navContent.imgAlt}
+				alt=""
+				aria-hidden="true"
 			/>
 		</button>
 
 		<ul class={`nav__nav__links ${menuOpen ? 'nav__nav__links-opened' : ''}`}>
 			<li class="nav__nav__links-item-container">
-				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Projects`} onclick={closeMenu}>
+				<a class="nav__nav__links-item" href={`${base}/${activeLanguage}/Projects`} onclick={closeMenu}>
 					{navContent.link1}
 				</a>
 			</li>
 
 			<li class="nav__nav__links-item-container">
-				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Vacations`} onclick={closeMenu}>
+				<a class="nav__nav__links-item" href={`${base}/${activeLanguage}/Vacations`} onclick={closeMenu}>
 					{navContent.lv}
 				</a>
 			</li>
 
 			<li class="nav__nav__links-item-container">
-				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Gallery`} onclick={closeMenu}>
+				<a class="nav__nav__links-item" href={`${base}/${activeLanguage}/Gallery`} onclick={closeMenu}>
 					{navContent.link2}
 				</a>
 			</li>
 
 			<li class="nav__nav__links-item-container">
-				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Aboutme`} onclick={closeMenu}>
+				<a class="nav__nav__links-item" href={`${base}/${activeLanguage}/Aboutme`} onclick={closeMenu}>
 					{navContent.link3}
 				</a>
 			</li>
 
 			<li class="nav__nav__links-item-container">
-				<a class="nav__nav__links-item" href={`${base}/${$currentLanguage}/Contact`} onclick={closeMenu}>
+				<a class="nav__nav__links-item" href={`${base}/${activeLanguage}/Contact`} onclick={closeMenu}>
 					{navContent.link4}
 				</a>
 			</li>
