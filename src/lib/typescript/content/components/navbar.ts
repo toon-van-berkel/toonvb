@@ -12,18 +12,18 @@ type Navbar = {
 export const content: Record<SupportedLanguage, Navbar> = {
 	'en-gb': {
 		imgAlt: 	'Menu icon',
-		link1: 		'Projects',
+		link1: 		'Web Projects',
 		lv:			'Vacations',
 		link2: 		'Gallery',
-		link3: 		'About me',
-		link4: 		'Contact'
+		link3: 		'About Toon',
+		link4: 		'Contact Toon'
 	},
 	'nl-nl': {
 		imgAlt: 	'Menu icoon',
-		link1: 		'Projecten',
+		link1: 		'Webprojecten',
 		lv:			'Vakanties',
 		link2: 		'Galerij',
-		link3: 		'Over mij',
-		link4: 		'Contact'
+		link3: 		'Over Toon',
+		link4: 		'Contact Toon'
 	}
 };

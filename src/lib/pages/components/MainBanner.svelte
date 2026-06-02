@@ -20,7 +20,7 @@
     <div class="mainBanner-backgroundCover"></div>
     <article class="mainBanner">
         <h1 class="mainBanner-title">       {mainbannerContent.title}       </h1>
-        <h2 class="mainBanner-subtitle">    {mainbannerContent.subtitle}    </h2>
+        <p class="mainBanner-subtitle">     {mainbannerContent.subtitle}    </p>
         <p  class="mainBanner-description"> {mainbannerContent.description} </p>
     </article>
 </section>

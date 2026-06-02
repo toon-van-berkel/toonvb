@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
     import MainBanner from '$lib/pages/components/MainBanner.svelte';
 	import SeoHead from '$lib/seo/SeoHead.svelte';
@@ -26,8 +27,8 @@
 	);
 	const seoDescription = $derived(
 		activeLanguage === 'nl-nl'
-			? 'Bekijk het digitale portfolio van Toon van Berkel, een creative software developer gericht op SvelteKit, webdevelopment, front-end design, automation en praktische digitale oplossingen.'
-			: 'Explore the digital portfolio of Toon van Berkel, a creative software developer focused on SvelteKit, web development, front-end design, automation and practical digital solutions.'
+			? 'Bekijk Toons portfolio met SvelteKit-projecten, webdevelopment, front-end design, automation en creatief digitaal werk.'
+			: 'Explore Toon van Berkel’s portfolio with SvelteKit projects, web development, front-end design, automation and creative digital work.'
 	);
 	const seoPath = $derived(`/${activeLanguage}`);
 	const faqSchema = $derived({
@@ -92,10 +93,44 @@
             </ul>
         </section>
 
+        <section class="technology-overview">
+            <h2>{homeContent.technologies.title}</h2>
+
+            <p>{homeContent.technologies.intro}</p>
+
+            <ul>
+                {#each homeContent.technologies.items as item}
+                    <li>{item}</li>
+                {/each}
+            </ul>
+
+            <p>
+                {homeContent.technologies.externalIntro}
+                <a href="https://svelte.dev/docs/kit" target="_blank" rel="noopener noreferrer">SvelteKit documentation</a>
+                {homeContent.technologies.andText}
+                <a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener noreferrer">TypeScript documentation</a>.
+            </p>
+        </section>
+
         <section class="current-work">
             <h2>{homeContent.currentWork.title}</h2>
 
             <p>{homeContent.currentWork.text}</p>
+        </section>
+
+        <section class="portfolio-purpose">
+            <h2>{homeContent.portfolioPurpose.title}</h2>
+
+            <p>{homeContent.portfolioPurpose.text1}</p>
+            <p>{homeContent.portfolioPurpose.text2}</p>
+
+            <p>
+                <a href={`${base}/${activeLanguage}/Projects`}>{homeContent.portfolioPurpose.projectsLink}</a>
+                <span aria-hidden="true"> · </span>
+                <a href={`${base}/${activeLanguage}/Aboutme`}>{homeContent.portfolioPurpose.aboutLink}</a>
+                <span aria-hidden="true"> · </span>
+                <a href={`${base}/${activeLanguage}/Contact`}>{homeContent.portfolioPurpose.contactLink}</a>
+            </p>
         </section>
 
         <section class="faq">
