@@ -83,7 +83,7 @@
     display: block;
     color: inherit;
     text-decoration: none;
-    border-radius: 24px;
+    border-radius: var(--radius-xl);
 }
 
 .card-wrapper article {
@@ -95,9 +95,9 @@
     flex-direction: column;
     justify-content: flex-end;
     overflow: hidden;
-    border-radius: 24px;
-    background-color: var(--card-bg);
-    box-shadow: 0 18px 42px rgba(57, 46, 30, 0.22);
+    border-radius: var(--radius-xl);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
     isolation: isolate;
 }
 
@@ -122,9 +122,9 @@
     background:
         linear-gradient(
             to bottom,
-            rgba(57, 46, 30, 0.08),
-            rgba(57, 46, 30, 0.28) 42%,
-            rgba(57, 46, 30, 0.68)
+            rgb(15 42 68 / 8%),
+            rgb(15 42 68 / 30%) 42%,
+            rgb(15 42 68 / 72%)
         );
 }
 
@@ -137,10 +137,10 @@
     bottom: 22px;
     height: 225px;
     z-index: -1;
-    border-radius: 20px;
-    background: rgba(132, 97, 54, 0.5);
-    border-left: 4px solid var(--link-on-dark);
-    box-shadow: 0 14px 34px rgba(57, 46, 30, 0.28);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-primary) 70%, transparent);
+    border-left: 4px solid var(--color-link-on-dark);
+    box-shadow: var(--shadow-card);
     backdrop-filter: blur(10px);
 }
 
@@ -160,9 +160,9 @@
     width: fit-content;
     margin-bottom: 8px;
     padding: 5px 11px;
-    border-radius: 999px;
-    background: rgba(253, 242, 208, 0.18);
-    color: var(--link-on-dark);
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--color-link-on-dark) 18%, transparent);
+    color: var(--color-link-on-dark);
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -172,7 +172,7 @@
 .card-wrapper article h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: var(--link-on-dark);
+    color: var(--color-link-on-dark);
     font-size: clamp(1.8rem, 4vw, 2.35rem);
     line-height: 1.05;
 }
@@ -180,7 +180,7 @@
 .card-wrapper article p {
     margin-top: 0;
     margin-bottom: 14px;
-    color: #fff7df;
+    color: var(--color-light-text);
     font-size: 0.92rem;
     line-height: 1.45;
 }
@@ -190,7 +190,7 @@
     width: fit-content;
     margin-bottom: 12px;
     padding-bottom: 4px;
-    color: var(--link-on-dark);
+    color: var(--color-link-on-dark);
     font-size: 0.9rem;
     font-weight: 700;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -203,11 +203,11 @@
 
 .card-wrapper a:hover .card-link {
     transform: translateX(5px);
-    color: var(--link-on-dark-hover);
+    color: var(--color-link-on-dark-hover);
 }
 
 .card-wrapper a:focus-visible {
-    outline: 4px solid var(--link-on-dark-hover);
+    outline: 4px solid var(--color-link-on-dark-hover);
     outline-offset: 6px;
 }
 
@@ -221,7 +221,7 @@
     .card-wrapper article {
         height: 440px;
         padding: 18px;
-        border-radius: 22px;
+        border-radius: var(--radius-xl);
     }
 
     .card-wrapper article::after {
@@ -229,7 +229,7 @@
         right: 18px;
         bottom: 18px;
         height: 235px;
-        border-radius: 20px;
+        border-radius: var(--radius-lg);
     }
 
     .card-wrapper article h2,

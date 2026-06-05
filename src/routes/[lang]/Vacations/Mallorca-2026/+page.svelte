@@ -201,7 +201,7 @@
         height: auto;
         display: block;
         border: 0;
-        border-radius: 10px;
+        border-radius: var(--radius-md);
     }
 
     :global(.leaflet-popup-content) {
@@ -212,14 +212,14 @@
 
     :global(.leaflet-popup-content-wrapper) {
         overflow: hidden;
-        border-radius: 14px;
+        border-radius: var(--radius-md);
     }
 	.map {
 		width: 100%;
 		max-width: 1100px;
 		height: 650px;
 		margin: 0 auto;
-		border-radius: 24px;
+		border-radius: var(--radius-xl);
 		overflow: hidden;
 		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 	}
@@ -234,7 +234,7 @@
 
 	:global(.photo-popup img) {
 		width: 100%;
-		border-radius: 10px;
+		border-radius: var(--radius-md);
 		margin-top: 0.4rem;
 	}
 </style>

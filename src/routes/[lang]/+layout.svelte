@@ -15,9 +15,11 @@
 </svelte:head>
 
 <div class="site-layout">
-	<header class="nav-container">
-		<TopBar></TopBar>
-		<Navbar></Navbar>
+	<header class="site-header">
+		<div class="site-header__inner">
+			<TopBar></TopBar>
+			<Navbar></Navbar>
+		</div>
 	</header>
 
 	<div class="site-content">

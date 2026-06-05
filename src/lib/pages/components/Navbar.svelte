@@ -27,7 +27,7 @@
 	}
 </script>
 
-<nav class="nav-container">
+<nav class="site-header__nav">
 	<div class="nav__nav">
 		<span class="nav__nav-brand-container">
 			<a class="nav__nav-brand" href={`${base}/${activeLanguage}`}>

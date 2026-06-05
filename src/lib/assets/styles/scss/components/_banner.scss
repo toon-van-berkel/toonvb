@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     z-index: 3;
-    background: var(--page-bg);
+    background: var(--color-page-bg);
 
     &__text {
         position: absolute;
@@ -88,17 +88,17 @@
     &::before {
         top: -10px;
         background:
-            linear-gradient(to bottom, var(--page-bg) 0%, transparent 75%),
-            radial-gradient(120px 40px at 18% 35%, var(--page-bg) 0%, transparent 70%),
-            radial-gradient(160px 50px at 72% 25%, var(--page-bg) 0%, transparent 70%);
+            linear-gradient(to bottom, var(--color-page-bg) 0%, transparent 75%),
+            radial-gradient(120px 40px at 18% 35%, var(--color-page-bg) 0%, transparent 70%),
+            radial-gradient(160px 50px at 72% 25%, var(--color-page-bg) 0%, transparent 70%);
     }
 
     &::after {
         bottom: -10px;
         background:
-            linear-gradient(to top, var(--page-bg) 0%, transparent 75%),
-            radial-gradient(140px 45px at 25% 55%, var(--page-bg) 0%, transparent 70%),
-            radial-gradient(180px 55px at 78% 65%, var(--page-bg) 0%, transparent 70%);
+            linear-gradient(to top, var(--color-page-bg) 0%, transparent 75%),
+            radial-gradient(140px 45px at 25% 55%, var(--color-page-bg) 0%, transparent 70%),
+            radial-gradient(180px 55px at 78% 65%, var(--color-page-bg) 0%, transparent 70%);
     }
 
     @media screen and (width < $bp-banner) {

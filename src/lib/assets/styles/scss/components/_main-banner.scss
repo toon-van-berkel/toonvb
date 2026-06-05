@@ -34,7 +34,7 @@
         top: 0;
         left: 0;
         z-index: 1;
-        background-color: rgb(182 169 149 / 56%);
+        background-color: color-mix(in srgb, var(--color-page-bg) 62%, transparent);
     }
 
     &-title,

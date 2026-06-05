@@ -70,6 +70,7 @@
                         <img src={imageSrc(anime.image)} alt={anime.imageAlt} loading="lazy" />
                         <span class="anime-card__content">
                             <strong>{anime.title}</strong>
+                            <span class="anime-card__meta">{anime.years}</span>
                             <small>{pageContent.statusLabels[anime.state]}</small>
                         </span>
                     </a>

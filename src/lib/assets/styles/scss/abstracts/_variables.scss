@@ -2,7 +2,6 @@
 // Variables
 // ------------------------------------------------------------
 // This file is the single place for colors, spacing, sizes and shadows.
-// The old variable names are kept as aliases, so existing CSS still works.
 
 $bp-xxs: 250px;
 $bp-xs: 300px;
@@ -17,32 +16,41 @@ $bp-banner: 1500px;
 
 :root {
     // Colors
-    --color-page-bg: #B6A995;
-    --color-surface: #846136;
-    --color-surface-muted: #a39784;
-    --color-text: #392E1E;
-    --color-line: #5E3F20;
-    --color-light-text: #fff5e5;
-    --color-link: #0E385F;
-    --color-link-hover: #0A2E4F;
-    --color-link-on-dark: #FDF2D0;
-    --color-link-on-dark-hover: #FDE68A;
+    --color-page-bg: #f7f5ef;
+    --color-surface: #ffffff;
+    --color-surface-muted: #efebe1;
+    --color-surface-soft: #f3f0e8;
+    --color-surface-elevated: #ffffff;
 
-    // Old aliases, do not remove unless all components are updated.
-    --link: var(--color-link);
-    --link-hover: var(--color-link-hover);
-    --link-on-dark: var(--color-link-on-dark);
-    --link-on-dark-hover: var(--color-link-on-dark-hover);
-    --page-bg: var(--color-page-bg);
-    --card-bg: var(--color-surface);
-    --primary-text: var(--color-text);
-    --line: var(--color-line);
+    --color-text: #171717;
+    --color-text-muted: #5f5f5f;
+    --color-heading: #0f172a;
+
+    --color-line: #ded8ca;
+    --color-line-strong: #cfc6b7;
+
+    --color-light-text: #f8fafc;
+
+    --color-primary: #0f2a44;
+    --color-primary-hover: #163b5f;
+
+    --color-link: #2f80ed;
+    --color-link-hover: #1c64d1;
+    --color-link-on-dark: #bfdbfe;
+    --color-link-on-dark-hover: #ffffff;
+
+    --color-accent: #38bdf8;
+    --color-accent-soft: #dbeafe;
+    --color-warning-soft: #fef3c7;
+    --color-danger-soft: #fee2e2;
+    --color-success-soft: #dcfce7;
 
     // Font
     --font-body: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
     // Layout
     --container-max: 1500px;
+    --article-max: 920px;
     --section-padding-x: 30px;
     --section-padding-x-mobile: 20px;
     --section-padding-x-small: 15px;
@@ -58,16 +66,50 @@ $bp-banner: 1500px;
     --space-12: 60px;
 
     // Radius
-    --radius-xs: 2px;
+    --radius-xs: 4px;
     --radius-sm: 8px;
-    --radius-md: 10px;
-    --radius-pill: 150px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-2xl: 36px;
+    --radius-pill: 999px;
 
     // Shadows
-    --shadow-brown: 5px 5px 10px 2px rgb(94 63 32 / 31%);
-    --shadow-soft: 5px 5px 5px 0 rgb(0 0 0 / 15%);
+    --shadow-soft: 0 10px 30px rgb(15 23 42 / 8%);
+    --shadow-card: 0 18px 45px rgb(15 23 42 / 10%);
     --shadow-text-light: 0 1px 10px rgb(255 255 255 / 18%);
 
     // Effects
     --transition-fast: 200ms ease-in;
+}
+
+[data-theme="dark"] {
+    --color-page-bg: #0b1120;
+    --color-surface: #111827;
+    --color-surface-muted: #1f2937;
+    --color-surface-soft: #172033;
+    --color-surface-elevated: #162033;
+
+    --color-text: #f8fafc;
+    --color-text-muted: #cbd5e1;
+    --color-heading: #ffffff;
+
+    --color-line: #334155;
+    --color-line-strong: #475569;
+
+    --color-light-text: #f8fafc;
+
+    --color-primary: #93c5fd;
+    --color-primary-hover: #bfdbfe;
+
+    --color-link: #60a5fa;
+    --color-link-hover: #93c5fd;
+    --color-link-on-dark: #bfdbfe;
+    --color-link-on-dark-hover: #ffffff;
+
+    --color-accent: #38bdf8;
+    --color-accent-soft: #082f49;
+    --color-warning-soft: #422006;
+    --color-danger-soft: #450a0a;
+    --color-success-soft: #052e16;
 }

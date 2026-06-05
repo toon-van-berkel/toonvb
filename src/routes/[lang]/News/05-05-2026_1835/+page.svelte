@@ -51,7 +51,7 @@
 	jsonLd={jsonLd}
 />
 
-<main class="normalize">
+<main class="normalize article-page">
 	<section>
 		<Breadcrumbs
 			items={[

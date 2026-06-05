@@ -42,15 +42,15 @@
     &__button {
         width: 40%;
         padding: var(--space-4);
-        border: 1px solid var(--card-bg);
-        border-radius: var(--radius-sm);
-        color: var(--page-bg);
+        border: 1px solid var(--color-primary);
+        border-radius: var(--radius-md);
+        color: var(--color-light-text);
         font-weight: bold;
         text-decoration: none;
-        background-color: var(--card-bg);
+        background-color: var(--color-primary);
 
         &:hover {
-            color: var(--card-bg);
+            color: var(--color-primary);
             background-color: transparent;
         }
 

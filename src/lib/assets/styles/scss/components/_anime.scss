@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 // ------------------------------------------------------------
 // Anime page
 // ------------------------------------------------------------
@@ -7,75 +10,80 @@
 
     &__header {
         max-width: 760px;
+        margin-bottom: var(--space-6);
 
         p {
             margin-top: var(--space-2);
+            color: var(--color-text-muted);
             font-size: 1.05rem;
             line-height: 1.7;
         }
     }
 
     &__filters {
-        margin-top: var(--space-5);
+        margin-bottom: var(--space-6);
         display: flex;
         flex-wrap: wrap;
-        gap: var(--space-2);
+        gap: var(--space-3);
 
         button {
-            min-height: 42px;
-            padding: 0 var(--space-4);
-            border: 1px solid var(--line);
-            border-radius: var(--radius-sm);
-            background: transparent;
-            color: var(--primary-text);
+            min-height: 46px;
+            padding: 0 var(--space-5);
+            border: 1px solid var(--color-line);
+            border-radius: var(--radius-pill);
+            background: var(--color-surface);
+            color: var(--color-text);
             font: inherit;
+            font-weight: 750;
             cursor: pointer;
             outline: 0;
             transition:
                 background-color var(--transition-fast),
+                border-color var(--transition-fast),
                 color var(--transition-fast),
                 transform var(--transition-fast);
 
-            &:hover,
-            &.active {
-                background-color: var(--card-bg);
-                color: var(--color-light-text);
-            }
-
             &:hover {
+                border-color: var(--color-link);
+                color: var(--color-link);
                 transform: translateY(-1px);
             }
 
+            &.active {
+                border-color: var(--color-primary);
+                background-color: var(--color-primary);
+                color: var(--color-light-text);
+            }
+
             &:focus-visible {
-                box-shadow: 0 0 0 3px rgb(14 56 95 / 32%);
+                box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-link) 28%, transparent);
             }
         }
     }
 
     &__layout {
-        margin-top: var(--space-6);
+        width: 100%;
     }
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: var(--space-4);
+        grid-template-columns: repeat(auto-fill, minmax(220px, 260px));
+        gap: 28px;
+        justify-content: start;
+        align-items: stretch;
     }
 }
 
 .anime-card { 
-    min-height: 300px;
-    max-width: 150px; 
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    border: 2px solid var(--line);
-    border-radius: var(--radius-sm);
-    background:
-        linear-gradient(135deg, rgb(14 56 95 / 15%), rgb(132 97 54 / 22%)),
-        var(--page-bg);
-    color: var(--primary-text);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    color: var(--color-text);
     box-shadow: var(--shadow-soft);
     text-align: left;
     font: inherit;
@@ -89,40 +97,58 @@
 
     &:hover,
     &.active {
-        border-color: var(--card-bg);
-        box-shadow: var(--shadow-brown);
-        transform: translateY(-2px);
+        border-color: var(--color-line-strong);
+        box-shadow: var(--shadow-card);
+        transform: translateY(-4px);
     }
 
     &:focus-visible {
-        box-shadow: 0 0 0 3px rgb(14 56 95 / 32%), var(--shadow-brown);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-link) 28%, transparent), var(--shadow-card);
     }
 
     img {
         width: 100%;
-        aspect-ratio: 3 / 4;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
-        background-color: var(--card-bg);
+        background-color: var(--color-surface);
     }
 
     &__content {
         padding: var(--space-4);
         display: grid;
-        gap: var(--space-1);
+        gap: var(--space-3);
 
         strong {
-            font-size: 1.3rem;
+            color: var(--color-heading);
+            font-size: clamp(1.25rem, 2vw, 1.55rem);
+            line-height: 1.15;
         }
 
         small {
             width: fit-content;
-            padding: 3px var(--space-2);
-            border-radius: var(--radius-xs);
-            background-color: rgb(255 245 229 / 65%);
-            color: var(--primary-text);
+            padding: 6px var(--space-3);
+            border-radius: var(--radius-pill);
+            background-color: var(--color-surface-soft);
+            color: var(--color-heading);
             text-transform: uppercase;
             letter-spacing: 0;
-            font-weight: 700;
+            font-size: .78rem;
+            font-weight: 800;
+        }
+    }
+
+    &__meta {
+        color: var(--color-text-muted);
+        font-size: .92rem;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    @include mq-max($bp-lg) {
+        width: min(100%, 320px);
+
+        &__content {
+            padding: var(--space-3);
         }
     }
 }
@@ -132,15 +158,19 @@
     display: grid;
     grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
     gap: var(--space-6);
-    background-color: rgb(255 245 229 / 38%);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
 
     > img {
         width: 100%;
         aspect-ratio: 3 / 4;
         object-fit: cover;
-        border-radius: var(--radius-sm);
+        border-radius: var(--radius-lg);
         box-shadow: var(--shadow-soft);
-        background-color: var(--card-bg);
+        background-color: var(--color-surface);
     }
 
     &__content {
@@ -166,10 +196,12 @@
         gap: var(--space-2);
 
         span {
-            padding: 4px var(--space-2);
-            border: 1px solid var(--line);
-            border-radius: var(--radius-xs);
-            font-size: 0.9rem;
+            padding: 6px var(--space-3);
+            border: 1px solid var(--color-line);
+            border-radius: var(--radius-pill);
+            background-color: var(--color-surface-soft);
+            color: var(--color-heading);
+            font-size: 0.82rem;
             text-transform: uppercase;
             font-weight: 700;
         }
@@ -177,6 +209,10 @@
 }
 
 @media (max-width: 800px) {
+    .anime-page__grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
     .anime-profile {
         grid-template-columns: 1fr;
     }

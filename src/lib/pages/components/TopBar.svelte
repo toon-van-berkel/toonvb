@@ -12,7 +12,7 @@
 	}
 </script>
 
-<nav class="nav__top-container">
+<nav class="site-header__topbar">
 	<ul class="nav__top">
 		<li class="nav__top__item">
 			<b class="nav__top__item-label">Language:</b>
