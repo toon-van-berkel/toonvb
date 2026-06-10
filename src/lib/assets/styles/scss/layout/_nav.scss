@@ -16,7 +16,6 @@
         margin-inline: auto;
         position: relative;
         overflow: hidden;
-        border: 1px solid var(--color-line);
         background-color: color-mix(in srgb, var(--color-surface) 94%, transparent);
         box-shadow: var(--shadow-soft);
         backdrop-filter: blur(14px);
@@ -24,13 +23,12 @@
 
     &__topbar {
         padding: var(--space-2) var(--space-5);
-        background-color: var(--color-surface-soft);
-        border-bottom: 1px solid var(--color-line);
+        background-color: var(--color-surface-themed-muted);
         border-radius: 0;
     }
-
+ 
     &__nav {
-        background-color: var(--color-surface);
+        background-color: var(--color-surface-themed);
         border-radius: 0;
     }
 }
@@ -72,7 +70,7 @@
             }
 
             &-label {
-                color: var(--color-text-muted);
+                color: var(--color-light-text); 
                 font-size: .9rem;
                 font-weight: 700;
 
@@ -99,9 +97,9 @@
             display: block;
             font-size: 2em;
             font-weight: 900;
-            color: var(--color-heading);
+            color: var(--color-light-text);
             text-decoration: none;
-
+ 
             &-container {
                 padding: var(--space-1) var(--space-2);
                 display: flex;
@@ -111,9 +109,11 @@
                 border-radius: var(--radius-md);
 
                 &:hover {
-                    border-color: var(--color-line-strong);
-                    background-color: var(--color-surface-soft);
+                    border-color: var(--color-line-strong); 
                 }
+            }
+            &:hover {
+                color: var(--color-light-text);  
             }
 
             @include mq-max(330px) {
@@ -155,7 +155,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                color: var(--color-text);
+                color: var(--color-light-text);
                 text-decoration: none;
 
                 &-container {
@@ -166,14 +166,17 @@
                     &:hover {
                         cursor: pointer;
                         border-color: var(--color-line-strong);
-                        background-color: var(--color-surface-soft);
+                        background-color: transparent;
                     }
+                }
+                &:hover {
+                    color: var(--color-light-text);
                 }
 
                 @include mq-max($bp-nav) {
                     color: var(--color-light-text);
                 }
-            }
+            } 
 
             @include mq-max($bp-nav) {
                 display: none;
