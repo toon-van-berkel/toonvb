@@ -47,7 +47,8 @@ export const content: Partial<Record<SupportedLanguage, FooterContent>> = {
 				title: 'Extra pages',
 				links: [
 					{ label: "Browse Toon's anime watchlist", href: '/Anime' },
-					{ label: 'Read updates from Toon', href: '/News' }
+					{ label: 'Read updates from Toon', href: '/News' },
+					{ label: "Dive into the world of Toon's D&D", href: '/Dnd-wiki' }
 				]
 			}
 		]
@@ -81,7 +82,8 @@ export const content: Partial<Record<SupportedLanguage, FooterContent>> = {
 				title: 'Extra pagina’s',
 				links: [
 					{ label: 'Bekijk Toons anime kijklijst', href: '/Anime' },
-					{ label: 'Lees updates van Toon', href: '/News' }
+					{ label: 'Lees updates van Toon', href: '/News' },
+					{ label: 'Duik in de D&D wereld van Toon', href: '/Dnd-wiki' }
 				]
 			}
 		]
