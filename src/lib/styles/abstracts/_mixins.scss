@@ -1,0 +1,9 @@
+@mixin focus-ring {
+    outline: 2px solid rgba(50, 223, 255, 0.75);
+    outline-offset: 4px;
+}
+
+@mixin section-shell {
+    width: min(100% - calc(var(--page-padding) * 2), var(--content-width));
+    margin-inline: auto;
+}

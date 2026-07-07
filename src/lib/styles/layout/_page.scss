@@ -1,0 +1,120 @@
+@use "../abstracts" as *;
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+    
+    background:
+        radial-gradient(
+            circle at 78% 18%,
+            rgba($color-primary, 0.11),
+            transparent 30rem
+        ),
+        radial-gradient(
+            circle at 18% 82%,
+            rgba($color-secondary, 0.1),
+            transparent 32rem
+        ),
+        linear-gradient(
+            135deg,
+            var(--color-background-soft) 0%,
+            var(--color-background-purple) 46%,
+            var(--color-background) 100%
+        );
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+        background-size: 80px 80px;
+
+        mask-image: radial-gradient(circle at center, black, transparent 74%);
+        opacity: 0.18;
+
+        pointer-events: none;
+    }
+
+    .portfolio {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+
+        .section {
+            @include section-shell;
+
+            padding-block: clamp(1.5rem, 8vw, 2.5rem);
+            scroll-margin-top: 7rem;
+
+            &__header {
+                max-width: 48rem;
+                margin-bottom: clamp(1.4rem, 3vw, 2.2rem);
+
+                h2 {
+                    margin: 0.35rem 0 0;
+                    font-size: clamp(2rem, 5vw, 4.4rem);
+                    line-height: 0.96;
+                    letter-spacing: 0;
+                }
+            }
+
+            &--blog {
+                padding-top: clamp(2rem, 5vw, 4rem);
+            }
+        }
+
+        .eyebrow {
+            margin: 0;
+
+            color: var(--color-data);
+            font-size: 0.78rem;
+            font-weight: 850;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .work-grid,
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .work-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .experience-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .about-copy {
+            max-width: 56rem;
+            margin: 0;
+
+            color: var(--color-text-muted);
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 980px) {
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section {
+                padding-block: 2.8rem;
+            }
+        }
+    }
+}

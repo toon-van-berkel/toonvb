@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+:root {
+    --color-primary: #{theme-color(primary, base)};
+    --color-primary-light: #{theme-color(primary, light)};
+    --color-primary-dark: #{theme-color(primary, dark)};
+
+    --color-secondary: #{theme-color(secondary, base)};
+    --color-secondary-light: #{theme-color(secondary, light)};
+    --color-secondary-dark: #{theme-color(secondary, dark)};
+
+    --color-data: #{theme-color(data, base)};
+    --color-data-light: #{theme-color(data, light)};
+    --color-data-dark: #{theme-color(data, dark)};
+
+    --color-background: #07040d;
+    --color-background-soft: #100719;
+    --color-background-purple: #160923;
+    --color-text: #f7f2ff;
+    --color-text-muted: #bdb0cc;
+    --color-text-dim: #8f81a1;
+    --color-panel: rgba(255, 255, 255, 0.025);
+    --color-panel-strong: rgba(255, 255, 255, 0.055);
+    --color-border: rgba(170, 55, 222, 0.16);
+
+    --page-padding: clamp(1rem, 4vw, 4rem);
+    --content-width: 1200px;
+}

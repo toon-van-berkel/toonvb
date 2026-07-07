@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+@mixin glass-panel($radius: $radius-lg, $alpha: 0.025) {
+    border: 1px solid rgba(170, 55, 222, 0.15);
+    border-radius: $radius;
+    background: rgba(255, 255, 255, $alpha);
+    box-shadow: $shadow-glass;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}

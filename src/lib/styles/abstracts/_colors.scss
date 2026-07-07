@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "sass:map";
+
+$lighten: 5%;
+$darken: 25%;
+
+$color-primary: #aa37de;
+$color-secondary: #3e16d6;
+$color-data: #32dfff;
+
+$colors: (
+    theme: (
+        primary: (
+            base: $color-primary,
+            light: color.adjust($color-primary, $lightness: $lighten),
+            dark: color.adjust($color-primary, $lightness: -$darken)
+        ),
+        secondary: (
+            base: $color-secondary,
+            light: color.adjust($color-secondary, $lightness: $lighten),
+            dark: color.adjust($color-secondary, $lightness: -$darken)
+        ),
+        data: (
+            base: $color-data,
+            light: color.adjust($color-data, $lightness: 12%),
+            dark: color.adjust($color-data, $lightness: -18%)
+        )
+    )
+);
+
+@function theme-color($group, $variant) {
+    @return map.get(map.get(map.get($colors, theme), $group), $variant);
+}
