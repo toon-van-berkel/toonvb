@@ -1,0 +1,29 @@
+:root {
+	--color-background: #ffffff;
+	--color-text: #111111;
+
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #08040f;
+		--color-text: #ffffff;
+
+		color-scheme: dark;
+	}
+}
+
+html[data-theme='light'] {
+	--color-background: #ffffff;
+	--color-text: #111111;
+
+	color-scheme: light;
+}
+
+html[data-theme='dark'] {
+	--color-background: #08040f;
+	--color-text: #ffffff;
+
+	color-scheme: dark;
+}
